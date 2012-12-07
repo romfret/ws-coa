@@ -1,7 +1,5 @@
 package diffusion.channel.proxy;
 
-import java.util.List;
-
 import diffusion.display.Display;
 import diffusion.observer.Observer;
 import diffusion.observer.Subject;
@@ -14,25 +12,22 @@ import diffusion.sensor.Sensor;
  */
 public class Channel implements Sensor, Display {
 
-	private Subject subject = null;
+	private Subject subject;
 	
 	public Channel(Subject subject) {
 		this.subject = subject;
 	}
 	
 	public void attach(Observer o) {
-		// TODO Auto-generated method stub
-		
+		subject.attach(o);
 	}
 
 	public void detach(Observer o) {
-		// TODO Auto-generated method stub
-		
+		subject.detach(o);
 	}
 
 	public void updateObservers() {
-		// TODO Auto-generated method stub
-		
+		subject.updateObservers();
 	}
 
 	public void update(Subject s) {

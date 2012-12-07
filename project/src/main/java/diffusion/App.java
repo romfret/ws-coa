@@ -18,6 +18,6 @@ public class App {
 		Channel channel = new Channel(sensor);
 		
 		
-		sensor.attach(display);
+		channel.attach(display);
 	}
 }
