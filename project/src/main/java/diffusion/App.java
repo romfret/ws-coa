@@ -22,6 +22,7 @@ public class App {
 		Display display = new DisplayImpl();
 		Channel channel = new Channel(sensor, display);
 		
+		((AtomicDiffusionImpl)atomicDiffusion).setSensor(sensor);
 		sensor.attach(channel);
 		
 		Horloge h = new Horloge();
