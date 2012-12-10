@@ -6,6 +6,7 @@ import diffusion.display.DisplayImpl;
 import diffusion.sensor.Sensor;
 import diffusion.sensor.SensorImpl;
 import diffusion.sensor.strategy.AtomicDiffusionImpl;
+import diffusion.sensor.strategy.Diffusion;
 
 /**
  * 
@@ -14,9 +15,13 @@ import diffusion.sensor.strategy.AtomicDiffusionImpl;
  */
 public class App {
 	public static void main(String[] args) {
-		Channel channel = new Channel();
-		Sensor sensor = new SensorImpl(new AtomicDiffusionImpl(channel));
+		Diffusion atomicDiffusion = new AtomicDiffusionImpl();
+		
+		Sensor sensor = new SensorImpl(atomicDiffusion);
 		Display display = new DisplayImpl();
+		Channel channel = new Channel(sensor, display);
+		
+		atomicDiffusion.setChannel(channel);
 		
 		
 		sensor.attach(display);

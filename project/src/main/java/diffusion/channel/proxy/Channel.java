@@ -12,14 +12,20 @@ import diffusion.sensor.Sensor;
  */
 public class Channel implements Sensor, Display {
 
-	public void update(Subject s) {
-		// TODO Auto-generated method stub
-		
+	private Sensor subject;
+	private Display observer;
+	
+	public Channel(Sensor subject, Display observer) {
+		this.subject = subject;
+		this.observer = observer;
+	}
+	
+	public void update(Sensor s) {
+		observer.update(this);
 	}
 
 	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
+		return subject.getValue();
 	}
 
 	@Override
@@ -36,6 +42,12 @@ public class Channel implements Sensor, Display {
 
 	@Override
 	public void updateObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Subject s) {
 		// TODO Auto-generated method stub
 		
 	}
