@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import diffusion.observer.Observer;
+import diffusion.sensor.strategy.Diffusion;
 
 /**
  * 
@@ -13,10 +14,12 @@ import diffusion.observer.Observer;
 public class SensorImpl implements Sensor {
 
 	private List<Observer> observers;
+	private Diffusion diffusion;
 	private int value;
 	
-	public SensorImpl() {
+	public SensorImpl(Diffusion diffusion) {
 		observers = new ArrayList<Observer>();
+		this.diffusion = diffusion;
 	}
 	
 	public void attach(Observer o) {
