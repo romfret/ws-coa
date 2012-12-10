@@ -24,6 +24,6 @@ public class App {
 		atomicDiffusion.setChannel(channel);
 		
 		
-		sensor.attach(display);
+		sensor.attach(channel);
 	}
 }
