@@ -8,7 +8,7 @@ public class DisplayImpl implements Display {
 	@Override
 	public void update(Subject s) {
 		// TODO
-		((SensorImpl) s).getValue();
+		System.out.println(((SensorImpl) s).getValue());
 	}
 
 	
