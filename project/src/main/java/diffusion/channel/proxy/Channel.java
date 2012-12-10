@@ -12,24 +12,6 @@ import diffusion.sensor.Sensor;
  */
 public class Channel implements Sensor, Display {
 
-	private Subject subject;
-	
-	public Channel(Subject subject) {
-		this.subject = subject;
-	}
-	
-	public void attach(Observer o) {
-		subject.attach(o);
-	}
-
-	public void detach(Observer o) {
-		subject.detach(o);
-	}
-
-	public void updateObservers() {
-		subject.updateObservers();
-	}
-
 	public void update(Subject s) {
 		// TODO Auto-generated method stub
 		
@@ -40,9 +22,27 @@ public class Channel implements Sensor, Display {
 		return 0;
 	}
 
-	public void tick() {
+	@Override
+	public void attach(Observer o) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	@Override
+	public void detach(Observer o) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateObservers() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void tick() {
+		// TODO Auto-generated method stub
+		
+	}
 }
