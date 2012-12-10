@@ -1,6 +1,7 @@
 package diffusion.display;
 
 import diffusion.observer.Observer;
+import diffusion.sensor.Sensor;
 
 /**
  * 
@@ -9,6 +10,6 @@ import diffusion.observer.Observer;
  */
 public interface Display extends Observer {
 	
-	
+	public void update(Sensor s);
 
 }

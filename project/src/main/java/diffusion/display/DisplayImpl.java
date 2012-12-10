@@ -1,14 +1,19 @@
 package diffusion.display;
 
 import diffusion.observer.Subject;
-import diffusion.sensor.SensorImpl;
+import diffusion.sensor.Sensor;
 
 public class DisplayImpl implements Display {
 
+	public void update(Sensor s) {
+		// TODO
+		System.out.println(s.getValue());
+	}
+
 	@Override
 	public void update(Subject s) {
-		// TODO
-		System.out.println(((SensorImpl) s).getValue());
+		// TODO Auto-generated method stub
+		
 	}
 
 	
