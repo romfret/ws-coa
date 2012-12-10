@@ -1,6 +1,5 @@
 package diffusion.sensor.strategy;
 
-import diffusion.channel.proxy.Channel;
 import diffusion.sensor.Sensor;
 
 /**
@@ -11,7 +10,6 @@ import diffusion.sensor.Sensor;
 public class AtomicDiffusionImpl implements Diffusion {
 
 	private Sensor sensor;
-	private Channel channel;
 
 	public AtomicDiffusionImpl() {
 	}
@@ -21,11 +19,7 @@ public class AtomicDiffusionImpl implements Diffusion {
 	}
 
 	public void execute() {
-		
-	}
-
-	public void setChannel(Channel channel) {
-		this.channel = channel;
+		sensor.updateObservers();
 	}
 	
 	public void setSensor(Sensor sensor){

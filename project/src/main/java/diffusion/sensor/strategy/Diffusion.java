@@ -1,6 +1,5 @@
 package diffusion.sensor.strategy;
 
-import diffusion.channel.proxy.Channel;
 
 /**
  * 
@@ -10,5 +9,4 @@ import diffusion.channel.proxy.Channel;
 public interface Diffusion {
 	public void configure();
 	public void execute();
-	public void setChannel(Channel channel);
 }

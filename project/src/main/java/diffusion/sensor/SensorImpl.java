@@ -42,8 +42,9 @@ public class SensorImpl implements Sensor {
 
 	public void tick() {
 		value = (int) (Math.random()*100);
-		//diffusion.execute();
-		updateObservers();
+		diffusion.execute();
+		//updateObservers();
+		
 	}
 
 }
