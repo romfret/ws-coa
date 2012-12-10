@@ -41,8 +41,7 @@ public class SensorImpl implements Sensor {
 	}
 
 	public void tick() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Tante");
 	}
 
 }

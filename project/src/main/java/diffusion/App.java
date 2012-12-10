@@ -1,5 +1,6 @@
 package diffusion;
 
+import utils.Horloge;
 import diffusion.channel.proxy.Channel;
 import diffusion.display.Display;
 import diffusion.display.DisplayImpl;
@@ -23,7 +24,10 @@ public class App {
 		
 		atomicDiffusion.setChannel(channel);
 		
-		
 		sensor.attach(channel);
+		
+		Horloge h = new Horloge();
+		h.periodicallyActivate(sensor, 1000);
+		
 	}
 }
