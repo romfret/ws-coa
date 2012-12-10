@@ -3,6 +3,7 @@ package diffusion.sensor;
 import java.util.ArrayList;
 import java.util.List;
 
+import diffusion.display.Display;
 import diffusion.observer.Observer;
 import diffusion.sensor.strategy.Diffusion;
 
@@ -32,7 +33,8 @@ public class SensorImpl implements Sensor {
 
 	public void updateObservers() {
 		for (Observer o : observers) {
-			o.update(this);
+			// TODO : bug avec methodes update() des interfaces Observer et Display => le parametre est different d'ou l'obligation de cast
+			((Display) o).update(this);
 		}
 	}
 
