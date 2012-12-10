@@ -6,15 +6,14 @@ import diffusion.sensor.Sensor;
 /**
  * 
  * @author Douchement & Le Ho
- *
+ * 
  */
 public class AtomicDiffusionImpl implements Diffusion {
 
 	private Sensor sensor;
 	private Channel channel;
-	
-	public AtomicDiffusionImpl(Channel channel) {
-		this.channel = channel;
+
+	public AtomicDiffusionImpl() {
 	}
 
 	public void configure() {
@@ -22,6 +21,10 @@ public class AtomicDiffusionImpl implements Diffusion {
 	}
 
 	public void execute() {
-		
+
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
 	}
 }
