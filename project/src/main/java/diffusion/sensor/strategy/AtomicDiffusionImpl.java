@@ -21,10 +21,14 @@ public class AtomicDiffusionImpl implements Diffusion {
 	}
 
 	public void execute() {
-
+		
 	}
 
 	public void setChannel(Channel channel) {
 		this.channel = channel;
+	}
+	
+	public void setSensor(Sensor sensor){
+		this.sensor = sensor;
 	}
 }
