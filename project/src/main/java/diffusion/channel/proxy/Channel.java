@@ -1,7 +1,7 @@
 package diffusion.channel.proxy;
 
 import diffusion.display.IDisplay;
-import diffusion.observer.Observer;
+import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 
 /**
@@ -28,13 +28,13 @@ public class Channel implements ISensor, IDisplay {
 	}
 
 	@Override
-	public void attach(Observer o) {
+	public void attach(IObserver o) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void detach(Observer o) {
+	public void detach(IObserver o) {
 		// TODO Auto-generated method stub
 		
 	}

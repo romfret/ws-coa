@@ -1,9 +1,9 @@
 package diffusion.activeObject;
 
-import diffusion.observer.Subject;
+import diffusion.observer.ISubject;
 
 public interface IProxyAO {
 
-	public abstract Future update(Subject s);
+	public abstract Future update(ISubject s);
 
 }

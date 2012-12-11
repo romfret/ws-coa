@@ -5,7 +5,7 @@ package diffusion.observer;
  * @author Douchement & Le Ho
  *
  */
-public interface Observer<T> {
+public interface IObserver<T> {
 
 	/**
 	 * Update the observer with the given subject

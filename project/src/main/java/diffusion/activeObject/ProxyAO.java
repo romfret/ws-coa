@@ -1,10 +1,10 @@
 package diffusion.activeObject;
 
-import diffusion.observer.Subject;
+import diffusion.observer.ISubject;
 
 public class ProxyAO implements IProxyAO {
 	
-	public Future update(Subject s){
+	public Future update(ISubject s){
 		return null;
 	}
 
