@@ -2,13 +2,13 @@ package diffusion.activeObject;
 
 import java.util.concurrent.Callable;
 
-import diffusion.display.Display;
-import diffusion.sensor.Sensor;
+import diffusion.display.IDisplay;
+import diffusion.sensor.ISensor;
 
 public class Update implements Callable<Object> {
 
-	private Sensor sensor;
-	private Display display;
+	private ISensor sensor;
+	private IDisplay display;
 	
 	public Object call() throws Exception {
 		display.update(sensor);
@@ -18,7 +18,7 @@ public class Update implements Callable<Object> {
 	/**
 	 * Set the observer of type Dislay
 	 */
-	public void setObserver(Display display) {
+	public void setObserver(IDisplay display) {
 		this.display = display;
 	}
 	

@@ -2,12 +2,12 @@ package diffusion;
 
 import utils.Horloge;
 import diffusion.channel.proxy.Channel;
+import diffusion.display.IDisplay;
 import diffusion.display.Display;
-import diffusion.display.DisplayImpl;
+import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
-import diffusion.sensor.SensorImpl;
-import diffusion.sensor.strategy.AtomicDiffusionImpl;
-import diffusion.sensor.strategy.Diffusion;
+import diffusion.sensor.strategy.AtomicDiffusion;
+import diffusion.sensor.strategy.IDiffusion;
 
 /**
  * 
@@ -16,13 +16,13 @@ import diffusion.sensor.strategy.Diffusion;
  */
 public class App {
 	public static void main(String[] args) {
-		Diffusion atomicDiffusion = new AtomicDiffusionImpl();
+		IDiffusion atomicDiffusion = new AtomicDiffusion();
 		
-		Sensor sensor = new SensorImpl(atomicDiffusion);
-		Display display = new DisplayImpl();
+		ISensor sensor = new Sensor(atomicDiffusion);
+		IDisplay display = new Display();
 		Channel channel = new Channel(sensor, display);
 		
-		((AtomicDiffusionImpl)atomicDiffusion).setSensor(sensor);
+		((AtomicDiffusion)atomicDiffusion).setSensor(sensor);
 		sensor.attach(channel);
 		
 		Horloge h = new Horloge();

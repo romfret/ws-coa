@@ -1,15 +1,12 @@
 package diffusion.display;
 
-import diffusion.observer.Observer;
-import diffusion.sensor.Sensor;
+import diffusion.sensor.ISensor;
 
-/**
- * 
- * @author Douchement & Le Ho
- *
- */
-public interface Display extends Observer<Sensor> {
+public class Display implements IDisplay {
+
+	public void update(ISensor s) {
+		// TODO
+		System.out.println(s.getValue());
+	}
 	
-	public void update(Sensor subject);
-
 }

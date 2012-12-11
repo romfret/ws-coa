@@ -1,10 +1,12 @@
 package diffusion.sensor.strategy;
 
+
 /**
  * 
  * @author Douchement & Le Ho
  *
  */
-public class SequentialDiffusionImpl {
-
+public interface IDiffusion {
+	public void configure();
+	public void execute();
 }

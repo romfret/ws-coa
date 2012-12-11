@@ -1,17 +1,17 @@
 package diffusion.sensor.strategy;
 
-import diffusion.sensor.Sensor;
+import diffusion.sensor.ISensor;
 
 /**
  * 
  * @author Douchement & Le Ho
  * 
  */
-public class AtomicDiffusionImpl implements Diffusion {
+public class AtomicDiffusion implements IDiffusion {
 
-	private Sensor sensor;
+	private ISensor sensor;
 
-	public AtomicDiffusionImpl() {
+	public AtomicDiffusion() {
 	}
 
 	public void configure() {
@@ -22,7 +22,7 @@ public class AtomicDiffusionImpl implements Diffusion {
 		sensor.updateObservers();
 	}
 	
-	public void setSensor(Sensor sensor){
+	public void setSensor(ISensor sensor){
 		this.sensor = sensor;
 	}
 }

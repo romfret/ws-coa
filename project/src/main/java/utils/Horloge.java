@@ -3,13 +3,13 @@ package utils;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import diffusion.sensor.Sensor;
+import diffusion.sensor.ISensor;
 
 public class Horloge {
 
 	private Timer timer = new Timer();
 
-	public void periodicallyActivate(final Sensor sensor, double perdiodInMiliSeconds) {
+	public void periodicallyActivate(final ISensor sensor, double perdiodInMiliSeconds) {
 		TimerTask task = new TimerTask() {
 			public void run() {
 				sensor.tick();
