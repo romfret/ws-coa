@@ -14,6 +14,7 @@ public class Channel implements ISensor, IDisplay {
 	private ISensor subject;
 	private IDisplay observer;
 	
+	
 	public Channel(ISensor subject, IDisplay observer) {
 		this.subject = subject;
 		this.observer = observer;

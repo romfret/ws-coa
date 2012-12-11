@@ -1,11 +1,9 @@
 package diffusion.activeObject;
 
-import java.util.concurrent.Callable;
-
 import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 
-public class Update implements IUpdate, Callable<Object> {
+public class Update implements IUpdate {
 
 	private ISensor sensor;
 	private IDisplay display;

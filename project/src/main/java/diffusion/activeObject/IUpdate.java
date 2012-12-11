@@ -1,5 +1,7 @@
 package diffusion.activeObject;
 
+import java.util.concurrent.Callable;
+
 import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 
@@ -8,7 +10,7 @@ import diffusion.sensor.ISensor;
  * @author Douchement & Le Ho
  *
  */
-public interface IUpdate {
+public interface IUpdate extends Callable<Object>  {
 	
 	/**
 	 * Set the observer of type IDislay
