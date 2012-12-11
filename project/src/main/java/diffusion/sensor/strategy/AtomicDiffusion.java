@@ -10,8 +10,9 @@ import diffusion.sensor.ISensor;
 public class AtomicDiffusion implements IDiffusion {
 
 	private ISensor sensor;
-
+	
 	public AtomicDiffusion() {
+		
 	}
 
 	public void configure() {
@@ -25,4 +26,5 @@ public class AtomicDiffusion implements IDiffusion {
 	public void setSensor(ISensor sensor){
 		this.sensor = sensor;
 	}
+	
 }
