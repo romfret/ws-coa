@@ -8,8 +8,8 @@ import diffusion.sensor.Sensor;
  * @author Douchement & Le Ho
  *
  */
-public interface Display extends Observer {
+public interface Display extends Observer<Sensor> {
 	
-	public void update(Sensor s);
+	public void update(Sensor subject);
 
 }

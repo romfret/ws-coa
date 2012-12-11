@@ -5,10 +5,10 @@ package diffusion.observer;
  * @author Douchement & Le Ho
  *
  */
-public interface Observer {
+public interface Observer<T> {
 
 	/**
 	 * Update the observer with the given subject
 	 */
-	public void update(Subject s);
+	public void update(T subject);
 }

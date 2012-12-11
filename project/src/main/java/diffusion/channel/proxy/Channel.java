@@ -2,7 +2,6 @@ package diffusion.channel.proxy;
 
 import diffusion.display.Display;
 import diffusion.observer.Observer;
-import diffusion.observer.Subject;
 import diffusion.sensor.Sensor;
 
 /**
@@ -42,12 +41,6 @@ public class Channel implements Sensor, Display {
 
 	@Override
 	public void updateObservers() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void update(Subject s) {
 		// TODO Auto-generated method stub
 		
 	}
