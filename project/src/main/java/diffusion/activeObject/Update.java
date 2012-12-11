@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 
-public class Update implements Callable<Object> {
+public class Update implements IUpdate, Callable<Object> {
 
 	private ISensor sensor;
 	private IDisplay display;
@@ -15,18 +15,11 @@ public class Update implements Callable<Object> {
 		return null;
 	}
 	
-	/**
-	 * Set the observer of type IDislay
-	 */
 	public void setObserver(IDisplay display) {
 		this.display = display;
 	}
 	
-	/**
-	 * Set the subject of type ISensor
-	 */
 	public void setSubject(ISensor sensor) {
 		this.sensor = sensor;
 	}
-
 }
