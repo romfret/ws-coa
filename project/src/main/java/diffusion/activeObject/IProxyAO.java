@@ -1,9 +1,13 @@
 package diffusion.activeObject;
 
-import diffusion.observer.ISubject;
+import diffusion.display.IDisplay;
+import diffusion.sensor.ISensor;
 
 public interface IProxyAO {
 
-	public abstract Future update(ISubject s);
+	/**
+	 * TODO :
+	 */
+	public abstract Future update(ISensor subject, IDisplay display);
 
 }

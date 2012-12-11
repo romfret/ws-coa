@@ -1,5 +1,11 @@
 package diffusion.channel.proxy;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+import diffusion.activeObject.IUpdate;
+import diffusion.activeObject.Update;
 import diffusion.display.IDisplay;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
@@ -13,15 +19,27 @@ public class Channel implements ISensor, IDisplay {
 
 	private ISensor subject;
 	private IDisplay observer;
+	private IUpdate update;
 	
-	
-	public Channel(ISensor subject, IDisplay observer) {
-		this.subject = subject;
+	public Channel(IDisplay observer) {
 		this.observer = observer;
 	}
 	
-	public void update(ISensor s) {
-		observer.update(this);
+	public void update(ISensor subject) {
+		this.subject = subject;
+		
+		update = new Update();
+		update.setName("Channel update instance");
+		update.setObserver(observer);
+		update.setSubject(this);
+		
+		ScheduledExecutorService scheduler = Executors. newSingleThreadScheduledExecutor();
+		
+		long time = (long) (500 + Math.random() * 500);
+		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
+		
+		// L'observation faite via scheduler et l'instance update
+//		observer.update(this);
 	}
 
 	public int getValue() {
