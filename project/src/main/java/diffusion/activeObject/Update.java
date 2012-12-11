@@ -16,16 +16,16 @@ public class Update implements Callable<Object> {
 	}
 	
 	/**
-	 * Set the observer of type Dislay
+	 * Set the observer of type IDislay
 	 */
 	public void setObserver(IDisplay display) {
 		this.display = display;
 	}
 	
 	/**
-	 * Set the subject of type Sensor
+	 * Set the subject of type ISensor
 	 */
-	public void setSubject(Sensor sensor) {
+	public void setSubject(ISensor sensor) {
 		this.sensor = sensor;
 	}
 
