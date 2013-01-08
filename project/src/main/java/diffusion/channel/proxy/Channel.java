@@ -17,11 +17,13 @@ import diffusion.sensor.ISensor;
  */
 public class Channel implements ISensor, IDisplay {
 
+	private String name;
 	private ISensor subject;
 	private IDisplay observer;
 	private IUpdate update;
 	
-	public Channel(IDisplay observer) {
+	public Channel(String name, IDisplay observer) {
+		this.name = name;
 		this.observer = observer;
 	}
 	
@@ -44,6 +46,10 @@ public class Channel implements ISensor, IDisplay {
 
 	public int getValue() {
 		return subject.getValue();
+	}
+	
+	public String getName() {
+		return name;
 	}
 
 	@Override
