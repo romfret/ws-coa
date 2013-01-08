@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import diffusion.observer.IObserver;
+import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.IDiffusion;
 
 /**
@@ -19,9 +20,13 @@ public class Sensor implements ISensor {
 	private int value;
 	
 	@SuppressWarnings("rawtypes")
-	public Sensor(IDiffusion diffusion) {
+	public Sensor() {
 		observers = new ArrayList<IObserver>();
-		this.diffusion = diffusion;
+		
+		
+		// Etablir une regle de choix de la strategie
+		diffusion = new AtomicDiffusion();
+		diffusion.configure(this);
 	}
 	
 	@SuppressWarnings("rawtypes")

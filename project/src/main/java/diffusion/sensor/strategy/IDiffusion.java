@@ -1,5 +1,7 @@
 package diffusion.sensor.strategy;
 
+import diffusion.sensor.ISensor;
+
 
 /**
  * 
@@ -7,6 +9,6 @@ package diffusion.sensor.strategy;
  *
  */
 public interface IDiffusion {
-	public void configure();
+	public void configure(ISensor sensor);
 	public void execute();
 }

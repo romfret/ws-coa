@@ -15,8 +15,8 @@ public class AtomicDiffusion implements IDiffusion {
 		
 	}
 
-	public void configure() {
-
+	public void configure(ISensor sensor) {
+		this.sensor = sensor;
 	}
 	
 	/**
