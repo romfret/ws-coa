@@ -25,7 +25,7 @@ public class Channel implements ISensor, IDisplay {
 	public Channel(String name, IDisplay observer) {
 		this.name = name;
 		this.observer = observer;
-	}
+	} 
 	
 	public void update(ISensor subject) {
 		this.subject = subject;

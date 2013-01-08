@@ -50,7 +50,7 @@ public class Sensor implements ISensor {
 		value = (int) (Math.random()*100);
 		diffusion.execute();
 		//updateObservers();
-		
+	
 	}
 
 }
