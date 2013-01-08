@@ -39,7 +39,6 @@ public class Sensor implements ISensor {
 		observers.remove(o);
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void updateObservers() {
 //		for (IObserver o : observers) {
 //			// TODO : bug avec methodes update() des interfaces Observer et Display => le parametre est different d'ou l'obligation de cast
