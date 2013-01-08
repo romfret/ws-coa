@@ -12,7 +12,7 @@ public class Display implements IDisplay {
 
 	public void update(ISensor s) {
 		// TODO
-		System.out.println(s.getValue());
+		System.out.println(name + " - " + s.getValue());
 	}
 
 	public String getName() {

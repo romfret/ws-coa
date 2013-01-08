@@ -2,16 +2,15 @@ package diffusion.activeObject;
 
 import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
-import diffusion.sensor.strategy.IDiffusion;
 
 public class Update implements IUpdate {
 
 	private String name;
-	private IDiffusion diffusion;
+	private ISensor sensor;
 	private IDisplay display;
 	
 	public Object call() throws Exception {
-		//display.update(diffusion);
+		display.update(sensor);
 		return null;
 	}
 	
@@ -20,7 +19,7 @@ public class Update implements IUpdate {
 	}
 	
 	public void setSubject(ISensor sensor) {
-		this.diffusion = (IDiffusion) sensor;
+		this.sensor = sensor;
 	}
 
 	public void setName(String name) {

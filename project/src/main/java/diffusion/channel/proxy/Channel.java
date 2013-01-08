@@ -37,8 +37,11 @@ public class Channel implements ISensor, IDisplay {
 		
 		ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 		
-		long time = (long) (500 + Math.random() * 500);
+//		long time = (long) (500 + Math.random() * 500);
+		long time = (long) (500 + Math.random() * 2000);
 		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
+		
+		System.out.println(name + " - " + time + "ms");
 		
 		// L'observation faite via scheduler et l'instance update
 //		observer.update(this);
@@ -52,25 +55,21 @@ public class Channel implements ISensor, IDisplay {
 		return name;
 	}
 
-	@Override
 	public void attach(IObserver o) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void detach(IObserver o) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void updateObservers() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void tick() {
 		// TODO Auto-generated method stub
 		
