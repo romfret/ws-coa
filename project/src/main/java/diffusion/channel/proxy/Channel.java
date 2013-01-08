@@ -35,7 +35,7 @@ public class Channel implements ISensor, IDisplay {
 		update.setObserver(observer);
 		update.setSubject(this);
 		
-		ScheduledExecutorService scheduler = Executors. newSingleThreadScheduledExecutor();
+		ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 		
 		long time = (long) (500 + Math.random() * 500);
 		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
