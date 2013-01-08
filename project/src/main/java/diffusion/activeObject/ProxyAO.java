@@ -3,15 +3,16 @@ package diffusion.activeObject;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import diffusion.sensor.strategy.IDiffusion;
+import diffusion.display.IDisplay;
+import diffusion.sensor.ISensor;
 
 public class ProxyAO implements IProxyAO {
 
-	public Future update(IDiffusion diffusion) {
+	public Future update(ISensor sensor, IDisplay display) {
 		IUpdate update = new Update();
 		update.setName("ProxyAO update instance");
-		update.setSubject(diffusion);
 		
+		update.setSubject(sensor);
 		update.setObserver(display);
 
 		ExecutorService executor = Executors.newSingleThreadExecutor();

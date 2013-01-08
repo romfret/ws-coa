@@ -15,7 +15,6 @@ public class Display implements IDisplay {
 		System.out.println(s.getValue());
 	}
 
-	@Override
 	public String getName() {
 		return name;
 	}

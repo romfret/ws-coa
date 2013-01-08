@@ -11,7 +11,7 @@ import diffusion.sensor.ISensor;
  * @author Douchement & Le Ho
  *
  */
-public interface IDiffusion extends ISensor {
-	public void configure(ISensor sensor, List<IObserver> observers);
+public interface IDiffusion {
+	public void configure(ISensor sensor, @SuppressWarnings("rawtypes") List<IObserver> observers);
 	public void execute();
 }

@@ -26,7 +26,7 @@ public class Sensor implements ISensor {
 		
 		// Etablir une regle de choix de la strategie
 		diffusion = new AtomicDiffusion();
-		diffusion.configure(this);
+		diffusion.configure(this, observers);
 	}
 	
 	@SuppressWarnings("rawtypes")
@@ -41,10 +41,12 @@ public class Sensor implements ISensor {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void updateObservers() {
-		for (IObserver o : observers) {
-			// TODO : bug avec methodes update() des interfaces Observer et Display => le parametre est different d'ou l'obligation de cast
-			o.update(this);
-		}
+//		for (IObserver o : observers) {
+//			// TODO : bug avec methodes update() des interfaces Observer et Display => le parametre est different d'ou l'obligation de cast
+//			o.update(this);
+//		}
+		
+		diffusion.execute();
 	}
 
 	public int getValue() {
@@ -53,8 +55,7 @@ public class Sensor implements ISensor {
 
 	public void tick() {
 		value = (int) (Math.random()*100);
-		diffusion.execute();
-		//updateObservers();
+		updateObservers();
 	
 	}
 

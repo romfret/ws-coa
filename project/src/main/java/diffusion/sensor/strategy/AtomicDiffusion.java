@@ -4,6 +4,7 @@ import java.util.List;
 
 import diffusion.activeObject.IProxyAO;
 import diffusion.activeObject.ProxyAO;
+import diffusion.display.IDisplay;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 
@@ -16,12 +17,14 @@ public class AtomicDiffusion implements IDiffusion {
 
 	private ISensor sensor;
 	private IProxyAO proxyAO;
+	@SuppressWarnings("rawtypes")
 	private List<IObserver> observers;
 	
 	public AtomicDiffusion() {
 		proxyAO = new ProxyAO();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void configure(ISensor sensor, List<IObserver> observers) {
 		this.sensor = sensor;
 		this.observers = observers;
@@ -40,39 +43,12 @@ public class AtomicDiffusion implements IDiffusion {
 	 * 
 	 */
 
+	@SuppressWarnings("rawtypes")
 	public void execute() {
-		
+		for (IObserver observer : observers) {
+			proxyAO.update(sensor, (IDisplay)observer);
+		}
 		//sensor.updateObservers();
-	}
-
-	@Override
-	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void tick() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void attach(IObserver o) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void detach(IObserver o) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void updateObservers() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
