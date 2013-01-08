@@ -11,5 +11,7 @@ import diffusion.sensor.ISensor;
 public interface IDisplay extends IObserver<ISensor> {
 	
 	public void update(ISensor subject);
+	
+	public String getName();
 
 }
