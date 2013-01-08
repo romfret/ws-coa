@@ -1,6 +1,7 @@
 package diffusion.activeObject;
 
 import diffusion.display.IDisplay;
+import diffusion.sensor.ISensor;
 import diffusion.sensor.strategy.IDiffusion;
 
 public class Update implements IUpdate {
@@ -18,8 +19,8 @@ public class Update implements IUpdate {
 		this.display = display;
 	}
 	
-	public void setSubject(IDiffusion diffusion) {
-		this.diffusion = diffusion;
+	public void setSubject(ISensor sensor) {
+		this.diffusion = (IDiffusion) sensor;
 	}
 
 	public void setName(String name) {
