@@ -1,5 +1,7 @@
 package diffusion.sensor.strategy;
 
+import diffusion.activeObject.IProxyAO;
+import diffusion.activeObject.ProxyAO;
 import diffusion.sensor.ISensor;
 
 /**
@@ -10,9 +12,10 @@ import diffusion.sensor.ISensor;
 public class AtomicDiffusion implements IDiffusion {
 
 	private ISensor sensor;
+	private IProxyAO proxyAO;
 	
 	public AtomicDiffusion() {
-		
+		proxyAO = new ProxyAO();
 	}
 
 	public void configure(ISensor sensor) {
@@ -33,6 +36,7 @@ public class AtomicDiffusion implements IDiffusion {
 	 */
 
 	public void execute() {
-		sensor.updateObservers();
+		
+		//sensor.updateObservers();
 	}
 }

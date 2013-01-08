@@ -19,7 +19,7 @@ public class App {
 //		ISensor sensor = new Sensor(atomicDiffusion);
 		ISensor sensor = new Sensor();
 		IDisplay display = new Display("Display_1");
-		Channel channel = new Channel("Chanel_1", display);
+		Channel channel = new Channel("Channel_1", display);
 		
 //		((AtomicDiffusion)atomicDiffusion).setSensor(sensor);
 		sensor.attach(channel);

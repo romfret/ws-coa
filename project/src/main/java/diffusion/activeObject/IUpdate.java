@@ -3,7 +3,7 @@ package diffusion.activeObject;
 import java.util.concurrent.Callable;
 
 import diffusion.display.IDisplay;
-import diffusion.sensor.ISensor;
+import diffusion.sensor.strategy.IDiffusion;
 
 /**
  * 
@@ -20,7 +20,7 @@ public interface IUpdate extends Callable<Object> {
 	/**
 	 * Set the subject of type ISensor
 	 */
-	public void setSubject(ISensor sensor);
+	public void setSubject(IDiffusion diffusion);
 	
 	/**
 	 * Set the name of the Update instance
