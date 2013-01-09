@@ -80,7 +80,7 @@ public class Channel implements ISensor, IDisplay {
 		else
 			valueStr = Integer.toString(value);
 		
-		return "[" + name + "] - [Sensor Value = " + valueStr + "] - [" + timeStr + " ms]";
+		return "[" + name + "] - [Sensor Value = " + valueStr + "] - [Version : " + subject.getVersion() + "] - [" + timeStr + " ms]";
 	}
 
 	@SuppressWarnings("rawtypes")

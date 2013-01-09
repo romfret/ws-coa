@@ -7,6 +7,7 @@ public class Display implements IDisplay {
 	
 	private String name;
 	private int value;
+	public long version;
 	
 	private DisplayGUI displayGUI;
 
@@ -16,7 +17,8 @@ public class Display implements IDisplay {
 	}
 
 	public void update(ISensor s) {
-		value = s.getValue(); 
+		value = s.getValue();
+		version = s.getVersion();
 
 		System.out.println(this);
 		displayGUI.setValue(value);
@@ -34,7 +36,7 @@ public class Display implements IDisplay {
 		else
 			valueStr = Integer.toString(value);
 		
-		return "[" + name + "] - [Sensor Value = " + valueStr + "]";
+		return "[" + name + "] - [Sensor Value = " + valueStr + "] - [Version : " + version + "]";
 	}
 
 	public DisplayGUI getPresentation() {
