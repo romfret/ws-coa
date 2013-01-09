@@ -1,4 +1,4 @@
-package utils;
+package diffusion.display.ihm;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class DisplayGUI extends JFrame {
+public class DisplayGUI extends JPanel {
 
 	/**
 	 * 
