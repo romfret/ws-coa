@@ -1,0 +1,356 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" corner="BOTTOM_RIGHT" language="java" name="utils" project="project" 
+    file="/project/src/main/java/utils" binary="false">    
+    <position height="49" width="113" x="196" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="2" corner="BOTTOM_RIGHT" language="java" name="diffusion.observer" project="project" 
+    file="/project/src/main/java/diffusion/observer" binary="false">    
+    <position height="49" width="150" x="349" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="diffusion.App" project="project" 
+    file="/project/src/main/java/diffusion/App.java" binary="false">    
+    <position height="162" width="190" x="539" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy.IDiffusion" project="project" 
+    file="/project/src/main/java/diffusion/sensor/strategy/IDiffusion.java" binary="false">    
+    <position height="-1" width="-1" x="3311" y="-44"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" corner="BOTTOM_RIGHT" language="java" name="diffusion.activeObject.IProxyAO" project="project" 
+    file="/project/src/main/java/diffusion/activeObject/IProxyAO.java" binary="false">    
+    <position height="77" width="268" x="2947" y="321"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.ISensor" project="project" 
+    file="/project/src/main/java/diffusion/sensor/ISensor.java" binary="false">    
+    <position height="-1" width="-1" x="3681" y="-38"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy.SequentialDiffusion" 
+    project="project" file="/project/src/main/java/diffusion/sensor/strategy/SequentialDiffusion.java" binary="false">    
+    <position height="77" width="160" x="769" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <package id="8" corner="BOTTOM_RIGHT" language="java" name="diffusion.channel.proxy" project="project" 
+    file="/project/src/main/java/diffusion/channel/proxy" binary="false">    
+    <position height="49" width="188" x="969" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="9" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy" project="project" 
+    file="/project/src/main/java/diffusion/sensor/strategy" binary="false">    
+    <position height="49" width="197" x="1197" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="utils.Horloge" project="project" 
+    file="/project/src/main/java/utils/Horloge.java" binary="false">    
+    <position height="111" width="247" x="1434" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy.PeriodDiffusion" 
+    project="project" file="/project/src/main/java/diffusion/sensor/strategy/PeriodDiffusion.java" binary="false">    
+    <position height="77" width="131" x="1721" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.Sensor" project="project" 
+    file="/project/src/main/java/diffusion/sensor/Sensor.java" binary="false">    
+    <position height="179" width="152" x="3507" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="diffusion.activeObject.Update" project="project" 
+    file="/project/src/main/java/diffusion/activeObject/Update.java" binary="false">    
+    <position height="179" width="168" x="3699" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="diffusion.activeObject.ProxyAO" project="project" 
+    file="/project/src/main/java/diffusion/activeObject/ProxyAO.java" binary="false">    
+    <position height="94" width="289" x="2618" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" corner="BOTTOM_RIGHT" language="java" name="diffusion.activeObject.IUpdate" project="project" 
+    file="/project/src/main/java/diffusion/activeObject/IUpdate.java" binary="false">    
+    <position height="-1" width="-1" x="3977" y="281"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy.AnarchicDiffusion" 
+    project="project" file="/project/src/main/java/diffusion/sensor/strategy/AnarchicDiffusion.java" binary="false">    
+    <position height="-1" width="-1" x="3350" y="148"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <package id="17" corner="BOTTOM_RIGHT" language="java" name="diffusion.activeObject" project="project" 
+    file="/project/src/main/java/diffusion/activeObject" binary="false">    
+    <position height="49" width="176" x="1892" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" name="utils.DisplayGUI" project="project" 
+    file="/project/src/main/java/utils/DisplayGUI.java" binary="false">    
+    <position height="145" width="147" x="2769" y="489"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <package id="19" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor" project="project" 
+    file="/project/src/main/java/diffusion/sensor" binary="false">    
+    <position height="49" width="137" x="2108" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <interface id="20" corner="BOTTOM_RIGHT" language="java" name="diffusion.observer.ISubject" project="project" 
+    file="/project/src/main/java/diffusion/observer/ISubject.java" binary="false">    
+    <position height="-1" width="-1" x="4090" y="-25"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="21" corner="BOTTOM_RIGHT" language="java" name="diffusion.observer.IObserver" project="project" 
+    file="/project/src/main/java/diffusion/observer/IObserver.java" binary="false">    
+    <position height="-1" width="-1" x="3486" y="371"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="22" corner="BOTTOM_RIGHT" language="java" name="diffusion.display.IDisplay" project="project" 
+    file="/project/src/main/java/diffusion/display/IDisplay.java" binary="false">    
+    <position height="-1" width="-1" x="3835" y="544"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="23" corner="BOTTOM_RIGHT" language="java" name="diffusion.channel.proxy.Channel" project="project" 
+    file="/project/src/main/java/diffusion/channel/proxy/Channel.java" binary="false">    
+    <position height="213" width="158" x="4099" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="24" corner="BOTTOM_RIGHT" language="java" name="diffusion.sensor.strategy.AtomicDiffusion" 
+    project="project" file="/project/src/main/java/diffusion/sensor/strategy/AtomicDiffusion.java" binary="false">    
+    <position height="111" width="240" x="2947" y="68"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="25" corner="BOTTOM_RIGHT" language="java" name="diffusion.display.Display" project="project" 
+    file="/project/src/main/java/diffusion/display/Display.java" binary="false">    
+    <position height="-1" width="-1" x="3183" y="558"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <package id="26" corner="BOTTOM_RIGHT" language="java" name="diffusion.display" project="project" 
+    file="/project/src/main/java/diffusion/display" binary="false">    
+    <position height="49" width="140" x="2285" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <package id="27" corner="BOTTOM_RIGHT" language="java" name="diffusion" project="project" 
+    file="/project/src/main/java/diffusion" binary="false">    
+    <position height="49" width="113" x="2465" y="68"/>    
+    <display autosize="true" stereotype="true"/>  
+  </package>  
+  <realization id="28">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="29">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <realization id="30">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="31">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="32" name="subject"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="35" name="observers"/>      
+      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="38" name="observers"/>      
+      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="40">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="41">    
+    <bendpoint x="4087" y="321"/>    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="22"/>  
+  </realization>  
+  <realization id="42">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <association id="43">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="44" name="sensor"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="47">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="48" name="displayGUI"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="51" name="update"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="53">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="54">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="22"/>  
+  </realization>  
+  <association id="55">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="56" name="sensor"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="59" name="sensor"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="62" name="observers"/>      
+      <multiplicity id="63" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <bendpoint x="3706" y="321"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="65" name="display"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="68" name="proxyAO"/>      
+      <multiplicity id="69" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="70">    
+    <bendpoint x="4108" y="321"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="71" name="observer"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="74" name="proxyAO"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="77" name="diffusion"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="79">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
