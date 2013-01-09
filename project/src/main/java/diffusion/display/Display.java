@@ -27,8 +27,14 @@ public class Display implements IDisplay {
 	}
 	
 	@Override
-	public String toString() {		
-		return "[" + name + "] - [Sensor Value = " + value + "]";
+	public String toString() {
+		String valueStr = "";
+		if (value < 10)
+			valueStr = " " + Integer.toString(value);
+		else
+			valueStr = Integer.toString(value);
+		
+		return "[" + name + "] - [Sensor Value = " + valueStr + "]";
 	}
 	
 }

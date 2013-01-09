@@ -67,7 +67,15 @@ public class Channel implements ISensor, IDisplay {
 		else
 			timeStr = Long.toString(time);
 		
-		return "[" + name + "] - [" + timeStr + " ms] - [Sensor Value = " + subject.getValue() + "]";
+		
+		int value =  subject.getValue();
+		String valueStr = "";
+		if (value < 10)
+			valueStr = " " + Integer.toString(value);
+		else
+			valueStr = Integer.toString(value);
+		
+		return "[" + name + "] - [Sensor Value = " + valueStr + "] - [" + timeStr + " ms]";
 	}
 
 	@SuppressWarnings("rawtypes")
