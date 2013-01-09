@@ -8,6 +8,11 @@ import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 
 public class ProxyAO implements IProxyAO {
+	
+	private ExecutorService executor;
+	public ProxyAO() {
+		executor = Executors.newFixedThreadPool(10);
+	}
 
 	public Future<?> createUpdateObject(ISensor sensor, IDisplay display) {
 		IUpdate update = new Update();
@@ -16,7 +21,11 @@ public class ProxyAO implements IProxyAO {
 		update.setSubject(sensor);
 		update.setObserver(display);
 
-		ExecutorService executor = Executors.newSingleThreadExecutor();
+//		ExecutorService executor = Executors.newSingleThreadExecutor();
 		return (Future<?>) executor.submit(update);
+	}
+	
+	public void executorShutdown() {
+		executor.shutdown();
 	}
 }

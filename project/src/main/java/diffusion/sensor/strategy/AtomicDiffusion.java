@@ -21,7 +21,7 @@ public class AtomicDiffusion implements IDiffusion {
 	private List<IObserver> observers;
 	
 	public AtomicDiffusion() {
-		proxyAO = new ProxyAO();
+		
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -45,10 +45,11 @@ public class AtomicDiffusion implements IDiffusion {
 
 	@SuppressWarnings("rawtypes")
 	public void execute() {
+		proxyAO = new ProxyAO();
 		for (IObserver observer : observers) {
 			proxyAO.createUpdateObject(sensor, (IDisplay)observer);
 		}
-		//sensor.updateObservers();
+		((ProxyAO) proxyAO).executorShutdown(); //TODO : Pas très loin du but
 	}
 
 }

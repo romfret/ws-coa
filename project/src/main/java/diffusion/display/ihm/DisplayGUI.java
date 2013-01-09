@@ -31,17 +31,17 @@ public class DisplayGUI extends JPanel {
 		lblName = new JLabel(name, JLabel.CENTER);
 		lblName.setBackground(Color.BLACK);
 		lblName.setForeground(Color.RED);
-		lblName.setFont(new Font("Impact", Font.BOLD, 12));
+		lblName.setFont(new Font("Impact", Font.BOLD, 14));
 		
-		lblValue = new JLabel("label", JLabel.RIGHT);
+		lblValue = new JLabel("Null  ", JLabel.RIGHT);
 		lblValue.setBackground(Color.BLACK);
 		lblValue.setForeground(Color.RED);
 		lblValue.setFont(new Font("Impact", Font.BOLD, 48));
 		
-		lblVersion = new JLabel("Version : Null", JLabel.LEFT);
+		lblVersion = new JLabel("  Version : Null", JLabel.LEFT);
 		lblVersion.setBackground(Color.BLACK);
 		lblVersion.setForeground(Color.RED);
-		lblVersion.setFont(new Font("Impact", Font.BOLD, 12));
+		lblVersion.setFont(new Font("Impact", Font.BOLD, 14));
 		
 		this.add(lblName, BorderLayout.NORTH);
 		this.add(lblValue, BorderLayout.CENTER);
@@ -49,11 +49,11 @@ public class DisplayGUI extends JPanel {
 	}
 	
 	public void setValue(int number) {
-		lblValue.setText(String.valueOf(number));
+		lblValue.setText(String.valueOf(number + "  "));
 	}
 	
 	public void setVersion(long number) {
-		lblVersion.setText("Version : " + String.valueOf(number));
+		lblVersion.setText("  Version : " + String.valueOf(number));
 	}
 
 }

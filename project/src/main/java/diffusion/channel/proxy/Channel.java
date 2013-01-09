@@ -39,7 +39,7 @@ public class Channel implements ISensor, IDisplay {
 		
 		ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 		
-		time = (long) (500 + Math.random() * 2000);
+		time = (long) (500 + Math.random() * 5000);
 		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
 		
 		System.out.println(this);
