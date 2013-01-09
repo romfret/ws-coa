@@ -22,6 +22,7 @@ public class Display implements IDisplay {
 
 		System.out.println(this);
 		displayGUI.setValue(value);
+		displayGUI.setVersion(version);
 	}
 
 	public String getName() {
