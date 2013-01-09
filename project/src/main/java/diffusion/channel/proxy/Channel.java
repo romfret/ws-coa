@@ -21,6 +21,7 @@ public class Channel implements ISensor, IDisplay {
 	private ISensor subject;
 	private IDisplay observer;
 	private IUpdate update;
+	private long time;
 	
 	public Channel(String name, IDisplay observer) {
 		this.name = name;
@@ -37,11 +38,10 @@ public class Channel implements ISensor, IDisplay {
 		
 		ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 		
-//		long time = (long) (500 + Math.random() * 500);
-		long time = (long) (500 + Math.random() * 2000);
+		time = (long) (500 + Math.random() * 2000);
 		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
 		
-		System.out.println(name + " - " + time + "ms");
+		System.out.println(this);
 		
 		// L'observation faite via scheduler et l'instance update
 //		observer.update(this);
@@ -54,12 +54,29 @@ public class Channel implements ISensor, IDisplay {
 	public String getName() {
 		return name;
 	}
+	
+	@Override
+	public String toString() {
+		String timeStr = "";
+		if (time < 10)
+			timeStr = "   " + Long.toString(time);
+		else if (time < 100)
+			timeStr = "  " + Long.toString(time);
+		else  if (time < 1000)
+			timeStr = " " + Long.toString(time);
+		else
+			timeStr = Long.toString(time);
+		
+		return "[" + name + "] - [" + timeStr + " ms] - [Sensor Value = " + subject.getValue() + "]";
+	}
 
+	@SuppressWarnings("rawtypes")
 	public void attach(IObserver o) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	@SuppressWarnings("rawtypes")
 	public void detach(IObserver o) {
 		// TODO Auto-generated method stub
 		

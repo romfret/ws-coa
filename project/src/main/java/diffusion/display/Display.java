@@ -1,14 +1,12 @@
 package diffusion.display;
 
-import javax.swing.JFrame;
-
 import utils.DisplayGUI;
-
 import diffusion.sensor.ISensor;
 
 public class Display implements IDisplay {
 	
 	private String name;
+	private int value;
 	
 	private DisplayGUI displayGUI;
 
@@ -18,13 +16,19 @@ public class Display implements IDisplay {
 	}
 
 	public void update(ISensor s) {
-		// TODO
-		System.out.println(name + " - " + s.getValue());
-		displayGUI.setValue(s.getValue());
+		value = s.getValue(); 
+
+		System.out.println(this);
+		displayGUI.setValue(value);
 	}
 
 	public String getName() {
 		return name;
+	}
+	
+	@Override
+	public String toString() {		
+		return "[" + name + "] - [Sensor Value = " + value + "]";
 	}
 	
 }
