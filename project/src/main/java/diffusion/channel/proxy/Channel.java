@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import diffusion.activeObject.IUpdate;
 import diffusion.activeObject.Update;
 import diffusion.display.IDisplay;
+import diffusion.display.ihm.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 
@@ -98,5 +99,9 @@ public class Channel implements ISensor, IDisplay {
 	public void tick() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public DisplayGUI getPresentation() {
+		return null;
 	}
 }

@@ -29,9 +29,9 @@ public class App {
 		IDisplay display3 = new Display("Display_3");
 		
 		IIhm ihm = new Ihm();
-		ihm.addDisplay(display1);
-		ihm.addDisplay(display2);
-		ihm.addDisplay(display3);
+		ihm.addDisplay(display1.getPresentation());
+		ihm.addDisplay(display2.getPresentation());
+		ihm.addDisplay(display3.getPresentation());
 		
 		Channel channel1 = new Channel("Channel_1", display1);
 		Channel channel2 = new Channel("Channel_2", display2);

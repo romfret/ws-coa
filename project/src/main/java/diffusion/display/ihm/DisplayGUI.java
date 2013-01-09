@@ -15,7 +15,6 @@ public class DisplayGUI extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
 	private JLabel lblLabel;
 
 	public DisplayGUI(String name) {
@@ -29,7 +28,7 @@ public class DisplayGUI extends JPanel {
 		lblLabel.setBackground(Color.BLACK);
 		lblLabel.setForeground(Color.RED);
 		lblLabel.setFont(new Font("Impact", Font.BOLD, 48));
-		contentPane.add(lblLabel, BorderLayout.CENTER);
+		this.add(lblLabel, BorderLayout.CENTER);
 	}
 	
 	public void setValue(int number) {

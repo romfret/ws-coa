@@ -36,5 +36,9 @@ public class Display implements IDisplay {
 		
 		return "[" + name + "] - [Sensor Value = " + valueStr + "]";
 	}
+
+	public DisplayGUI getPresentation() {
+		return displayGUI;
+	}
 	
 }
