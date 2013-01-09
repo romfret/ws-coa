@@ -56,6 +56,10 @@ public class Channel implements ISensor, IDisplay {
 		return name;
 	}
 	
+	public long getVersion() {
+		return subject.getVersion();
+	}
+	
 	@Override
 	public String toString() {
 		String timeStr = "";

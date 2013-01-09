@@ -18,4 +18,10 @@ public interface ISensor extends ISubject {
 	 * Timer
 	 */
 	public void tick();
+	
+	/**
+	 * Get the date of the value
+	 * @return
+	 */
+	public long getVersion();
 }

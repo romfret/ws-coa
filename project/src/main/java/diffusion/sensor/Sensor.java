@@ -18,6 +18,7 @@ public class Sensor implements ISensor {
 	private List<IObserver> observers;
 	private IDiffusion diffusion;
 	private int value;
+	private long version;
 	
 	@SuppressWarnings("rawtypes")
 	public Sensor() {
@@ -40,11 +41,6 @@ public class Sensor implements ISensor {
 	}
 
 	public void updateObservers() {
-//		for (IObserver o : observers) {
-//			// TODO : bug avec methodes update() des interfaces Observer et Display => le parametre est different d'ou l'obligation de cast
-//			o.update(this);
-//		}
-		
 		diffusion.execute();
 	}
 
@@ -53,9 +49,14 @@ public class Sensor implements ISensor {
 	}
 
 	public void tick() {
+		version++;
 		value = (int) (Math.random()*100);
 		updateObservers();
 	
+	}
+	
+	public long getVersion() {
+		return version;
 	}
 
 }
