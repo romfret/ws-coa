@@ -1,6 +1,6 @@
 package diffusion;
 
-import utils.Horloge;
+import utils.Clock;
 import diffusion.channel.proxy.Channel;
 import diffusion.display.Display;
 import diffusion.display.IDisplay;
@@ -42,7 +42,7 @@ public class App {
 		sensor.attach(channel2);
 		sensor.attach(channel3);
 		
-		Horloge h = new Horloge();
+		Clock h = new Clock();
 		h.periodicallyActivate(sensor, 1000);
 		
 	}

@@ -5,7 +5,7 @@ import java.util.TimerTask;
 
 import diffusion.sensor.ISensor;
 
-public class Horloge {
+public class Clock {
 
 	private Timer timer = new Timer();
 
