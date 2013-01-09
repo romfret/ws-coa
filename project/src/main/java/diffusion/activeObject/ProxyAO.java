@@ -9,7 +9,7 @@ import diffusion.sensor.ISensor;
 
 public class ProxyAO implements IProxyAO {
 
-	public Future<?> update(ISensor sensor, IDisplay display) {
+	public Future<?> createUpdateObject(ISensor sensor, IDisplay display) {
 		IUpdate update = new Update();
 		update.setName("ProxyAO update instance");
 		

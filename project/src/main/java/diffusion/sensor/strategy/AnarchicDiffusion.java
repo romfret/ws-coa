@@ -33,7 +33,7 @@ public class AnarchicDiffusion implements IDiffusion {
 	@SuppressWarnings("rawtypes")
 	public void execute() {
 		for (IObserver observer : observers) {
-			proxyAO.update(sensor, (IDisplay)observer);
+			proxyAO.createUpdateObject(sensor, (IDisplay)observer);
 		}
 	}
 

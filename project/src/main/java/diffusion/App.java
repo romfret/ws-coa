@@ -21,6 +21,7 @@ public class App {
 	
 	public static void main(String[] args) {
 		ISensor sensor = new Sensor();
+		
 		IDisplay display1 = new Display("Display_1");
 		IDisplay display2 = new Display("Display_2");
 		IDisplay display3 = new Display("Display_3");

@@ -10,6 +10,6 @@ public interface IProxyAO {
 	/**
 	 * TODO :
 	 */
-	public abstract Future update(ISensor sensor, IDisplay display);
+	public abstract Future createUpdateObject(ISensor sensor, IDisplay display);
 
 }
