@@ -1,6 +1,6 @@
 package diffusion.display;
 
-import utils.DisplayGUI;
+import diffusion.display.ihm.DisplayGUI;
 import diffusion.sensor.ISensor;
 
 public class Display implements IDisplay {

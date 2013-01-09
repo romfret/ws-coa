@@ -4,6 +4,8 @@ import utils.Horloge;
 import diffusion.channel.proxy.Channel;
 import diffusion.display.Display;
 import diffusion.display.IDisplay;
+import diffusion.display.ihm.IIhm;
+import diffusion.display.ihm.Ihm;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
@@ -20,16 +22,22 @@ public class App {
 	public static final int PERIOD_DIFFUSION = 3;
 	
 	public static void main(String[] args) {
-		ISensor sensor = new Sensor();
+		
 		
 		IDisplay display1 = new Display("Display_1");
 		IDisplay display2 = new Display("Display_2");
 		IDisplay display3 = new Display("Display_3");
 		
+		IIhm ihm = new Ihm();
+		ihm.addDisplay(display1);
+		ihm.addDisplay(display2);
+		ihm.addDisplay(display3);
+		
 		Channel channel1 = new Channel("Channel_1", display1);
 		Channel channel2 = new Channel("Channel_2", display2);
 		Channel channel3 = new Channel("Channel_3", display3);
 		
+		ISensor sensor = new Sensor();
 		sensor.attach(channel1);
 		sensor.attach(channel2);
 		sensor.attach(channel3);

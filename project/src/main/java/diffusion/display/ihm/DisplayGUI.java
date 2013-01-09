@@ -20,14 +20,10 @@ public class DisplayGUI extends JPanel {
 
 	public DisplayGUI(String name) {
 		setVisible(true);
-		setTitle(name);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 250, 100);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		contentPane.setBackground(Color.BLACK);
-		setContentPane(contentPane);
+		this.setBorder(new EmptyBorder(5, 5, 5, 5));
+		this.setLayout(new BorderLayout(0, 0));
+		this.setBackground(Color.BLACK);
 		
 		lblLabel = new JLabel("label", JLabel.CENTER);
 		lblLabel.setBackground(Color.BLACK);
