@@ -1,6 +1,8 @@
 package diffusion.display.ihm;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -9,6 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 public class Ihm extends JFrame implements IIhm {
+	private static final long serialVersionUID = 1L;
+
+	private JPanel panelDisplay;
 	
 	public Ihm(){
 		super("Notre plus belle IHM");
@@ -38,11 +43,16 @@ public class Ihm extends JFrame implements IIhm {
 		this.add(panelWest, BorderLayout.WEST);
 		
 		
+		panelDisplay = new JPanel();
+		panelDisplay.setLayout(new FlowLayout());
+		this.add(panelDisplay, BorderLayout.CENTER);
+		
 		this.setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	public void addDisplay(DisplayGUI display) {
-		this.add(display);
+		
+		panelDisplay.add(display);
 	}
 }
