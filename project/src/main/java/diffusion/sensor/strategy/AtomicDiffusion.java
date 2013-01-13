@@ -1,6 +1,9 @@
 package diffusion.sensor.strategy;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 import diffusion.activeObject.IProxyAO;
 import diffusion.activeObject.ProxyAO;
@@ -19,9 +22,10 @@ public class AtomicDiffusion implements IDiffusion {
 	private IProxyAO proxyAO;
 	@SuppressWarnings("rawtypes")
 	private List<IObserver> observers;
+	List<Future<?>> tasks;
 	
 	public AtomicDiffusion() {
-		
+		tasks = new ArrayList<Future<?>>();
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -47,9 +51,9 @@ public class AtomicDiffusion implements IDiffusion {
 	public void execute() {
 		proxyAO = new ProxyAO();
 		for (IObserver observer : observers) {
-			proxyAO.createUpdateObject(sensor, (IDisplay)observer);
+			tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
 		}
-		((ProxyAO) proxyAO).executorShutdown(); //TODO : Pas très loin du but
+		((ProxyAO) proxyAO).invokeAll((List<? extends Callable<Future<?>>>) tasks); //TODO : Pas très loin du but
 	}
 
 }
