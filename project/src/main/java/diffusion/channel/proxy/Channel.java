@@ -85,27 +85,23 @@ public class Channel implements ISensor, IDisplay {
 
 	@SuppressWarnings("rawtypes")
 	public void attach(IObserver o) {
-		// TODO Auto-generated method stub
-		
+		subject.attach(o);
 	}
 
 	@SuppressWarnings("rawtypes")
 	public void detach(IObserver o) {
-		// TODO Auto-generated method stub
-		
+		subject.detach(o);
 	}
 
 	public void updateObservers() {
-		// TODO Auto-generated method stub
-		
+		subject.updateObservers();
 	}
 
 	public void tick() {
-		// TODO Auto-generated method stub
-		
+		subject.tick();
 	}
 
 	public DisplayGUI getPresentation() {
-		return null;
+		return observer.getPresentation();
 	}
 }
