@@ -3,7 +3,6 @@ package diffusion.channel.proxy;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import diffusion.activeObject.IUpdate;
@@ -25,10 +24,13 @@ public class Channel implements ISensor, IDisplay {
 	private IDisplay observer;
 	private IUpdate update;
 	private long time;
+	private ScheduledExecutorService scheduler;
 	
 	public Channel(String name, IDisplay observer) {
 		this.name = name;
 		this.observer = observer;
+		
+		scheduler = Executors.newScheduledThreadPool(10);
 	} 
 	
 	public IUpdate createUpdate(ISensor sensor) {
@@ -41,9 +43,9 @@ public class Channel implements ISensor, IDisplay {
 	}
 	
 	public Future<?> update(ISensor subject) {
-		ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+		
 		time = (long) (500 + Math.random() * 10000);
-		ScheduledFuture<Object> future = scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
+		Future<Object> future = scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
 		
 		System.out.println(this);
 		

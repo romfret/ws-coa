@@ -1,6 +1,8 @@
 package diffusion.activeObject;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -21,12 +23,23 @@ public class ProxyAO implements IProxyAO {
 		
 		update.setSubject(sensor);
 		update.setObserver(display);
-		//(Future<?>)
-//		ExecutorService executor = Executors.newSingleThreadExecutor();
+		
 		return executor.submit(update);
 	}
 	
-	public List<Future<Object>> invokeAll(List<IUpdate> tasks) throws InterruptedException {
-		return executor.invokeAll(tasks);
+	
+	public List<Future<Object>> invokeAll(List<Future<?>> tasks) throws InterruptedException {
+		List<IUpdate> u = new ArrayList<IUpdate>();
+		for (Future<?> task : tasks) {
+			try {
+				@SuppressWarnings("unchecked")
+				Future<Object> future = (Future<Object>) ((Future<?>) task).get();
+				System.out.println(future.get());
+//				u.add((IUpdate) future.get());
+			} catch (ExecutionException e) {
+				e.printStackTrace();
+			}
+		}
+		return executor.invokeAll(u);
 	}
 }

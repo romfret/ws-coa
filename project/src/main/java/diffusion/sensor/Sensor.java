@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import diffusion.observer.IObserver;
-import diffusion.sensor.strategy.AnarchicDiffusion;
 import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.IDiffusion;
 

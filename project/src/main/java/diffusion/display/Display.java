@@ -1,6 +1,9 @@
 package diffusion.display;
 
-import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import diffusion.activeObject.IUpdate;
 import diffusion.display.ihm.DisplayGUI;
@@ -19,14 +22,48 @@ public class Display implements IDisplay {
 		displayGUI = new DisplayGUI(name);
 	}
 
-	public ScheduledFuture<Object> update(ISensor s) {
+	public Future<Object> update(ISensor s) {
 		value = s.getValue();
 		version = s.getVersion();
 
 		System.err.println(this);
 		displayGUI.setValue(value);
 		displayGUI.setVersion(version);
-		return null;
+		
+		Future<Object> f = new Future<Object>() {
+			public String toString() {
+				return "TROLOLOLO dans un future factice renvoyé par Display.update(..)";
+			}
+
+			public boolean cancel(boolean mayInterruptIfRunning) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			public boolean isCancelled() {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			public boolean isDone() {
+				// TODO Auto-generated method stub
+				return false;
+			}
+
+			public Object get() throws InterruptedException, ExecutionException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public Object get(long timeout, TimeUnit unit)
+					throws InterruptedException, ExecutionException,
+					TimeoutException {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+		
+		return f;
 	}
 
 	public String getName() {

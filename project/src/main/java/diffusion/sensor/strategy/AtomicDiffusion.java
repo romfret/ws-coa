@@ -2,11 +2,9 @@ package diffusion.sensor.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 import diffusion.activeObject.IProxyAO;
-import diffusion.activeObject.IUpdate;
 import diffusion.activeObject.ProxyAO;
 import diffusion.display.IDisplay;
 import diffusion.observer.IObserver;
@@ -59,42 +57,27 @@ public class AtomicDiffusion implements IDiffusion {
 		}
 		
 		
-		// attendre les display
-		for (Future<?> task : tasks){
-			try {
-				while(! ( (Future<?>) task.get() ).isDone() ){}
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ExecutionException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			};
+		try {
+			// Attente passive
+			((ProxyAO) proxyAO).invokeAll(tasks);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 		
 		
-
-		long d = System.currentTimeMillis();
-		System.out.println("============================DEB>" +d);
-//		try {
-//			tots = ((ProxyAO) proxyAO).invokeAll(tasks) ;
-//		} catch (InterruptedException e) {e.printStackTrace();} 
-
-		long d2 = System.currentTimeMillis();
-		System.out.println("============================FIN>" +d2 +"diff="+(d2-d));
-		
-		
-		
-		
-
-//		
-//		for(Future<Object> tot : tots){
-//			System.out.println("for(Future<Object> tot : tots) => tot : " + tot);
-//			int i =0;
-//			while(!tot.isDone()){
-//				System.out.println(i++);
+//		// attendre les display
+//		for (Future<?> task : tasks){
+//			try {
+//				while(! ( (Future<?>) task.get() ).isDone() ){}
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			} catch (ExecutionException e) {
+//				e.printStackTrace();
 //			};
 //		}
+		
+		System.out.println("==============================================================================");
+
 		
 		
 	}

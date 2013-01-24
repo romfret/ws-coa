@@ -11,7 +11,7 @@ public class Update implements IUpdate {
 	
 	public Object call() throws Exception {
 		display.createUpdate(sensor);
-	//	display.update(sensor); //sensor = le canal
+//		display.update(sensor); //sensor = le canal
 		return display.update(sensor);
 	}
 	
