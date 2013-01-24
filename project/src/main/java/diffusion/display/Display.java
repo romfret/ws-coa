@@ -20,7 +20,7 @@ public class Display implements IDisplay {
 		value = s.getValue();
 		version = s.getVersion();
 
-		System.out.println(this);
+		System.err.println(this);
 		displayGUI.setValue(value);
 		displayGUI.setVersion(version);
 	}

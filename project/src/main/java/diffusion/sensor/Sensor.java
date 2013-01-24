@@ -28,7 +28,7 @@ public class Sensor implements ISensor {
 		
 		// Etablir une regle de choix de la strategie
 //		diffusion = new AnarchicDiffusion();
-		diffusion = new AnarchicDiffusion();
+		diffusion = new AtomicDiffusion();
 		diffusion.configure(this, observers);
 	}
 	

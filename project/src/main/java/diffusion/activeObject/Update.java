@@ -10,7 +10,7 @@ public class Update implements IUpdate {
 	private IDisplay display;
 	
 	public Object call() throws Exception {
-		display.update(sensor);
+		display.update(sensor); //display = le canal
 		return null;
 	}
 	
