@@ -25,7 +25,6 @@ public class Sensor implements ISensor {
 	public Sensor() {
 		observers = new ArrayList<IObserver>();
 		
-		
 		// Etablir une regle de choix de la strategie
 //		diffusion = new AnarchicDiffusion();
 		diffusion = new AtomicDiffusion();

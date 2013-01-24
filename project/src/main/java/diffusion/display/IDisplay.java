@@ -1,5 +1,8 @@
 package diffusion.display;
 
+import java.util.concurrent.Future;
+
+import diffusion.activeObject.IUpdate;
 import diffusion.display.ihm.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
@@ -11,10 +14,12 @@ import diffusion.sensor.ISensor;
  */
 public interface IDisplay extends IObserver<ISensor> {
 	
-	public void update(ISensor subject);
+	public Future<?> update(ISensor sensor);
 	
 	public String getName();
 
 	public DisplayGUI getPresentation();
+
+	public IUpdate createUpdate(ISensor sensor);
 
 }

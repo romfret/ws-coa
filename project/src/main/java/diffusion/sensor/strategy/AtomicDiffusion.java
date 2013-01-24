@@ -2,6 +2,7 @@ package diffusion.sensor.strategy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 import diffusion.activeObject.IProxyAO;
@@ -56,12 +57,19 @@ public class AtomicDiffusion implements IDiffusion {
 		for (IObserver observer : observers) {
 			tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
 		}
-		List<Future<Object>> tots=null;
 		
 		
 		// attendre les display
 		for (Future<?> task : tasks){
-			while(!task.isDone());
+			try {
+				while(! ( (Future<?>) task.get() ).isDone() ){}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ExecutionException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
 		}
 		
 		
