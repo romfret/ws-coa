@@ -53,28 +53,35 @@ public class AtomicDiffusion implements IDiffusion {
 		proxyAO = new ProxyAO();
 		
 		
-		long d = System.currentTimeMillis();
-		System.out.println("============================DEB>" +d);
 		for (IObserver observer : observers) {
 			tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
 		}
 		List<Future<Object>> tots=null;
-		try {
-			tots = ((ProxyAO) proxyAO).invokeAll(tasks) ;
-		} catch (InterruptedException e) {e.printStackTrace();} 
 		
-		System.out.println("Sizetot"+tots.size());
-		
-		for(Future<Object> tot : tots){
-			int i =0;
-			while(!tot.isDone()){
-				System.out.println(i++);
-			};
-		}
-		
-		
+
+		long d = System.currentTimeMillis();
+		System.out.println("============================DEB>" +d);
+//		try {
+//			tots = ((ProxyAO) proxyAO).invokeAll(tasks) ;
+//		} catch (InterruptedException e) {e.printStackTrace();} 
+
 		long d2 = System.currentTimeMillis();
 		System.out.println("============================FIN>" +d2 +"diff="+(d2-d));
+		
+		
+		
+		
+
+//		
+//		for(Future<Object> tot : tots){
+//			System.out.println("for(Future<Object> tot : tots) => tot : " + tot);
+//			int i =0;
+//			while(!tot.isDone()){
+//				System.out.println(i++);
+//			};
+//		}
+		
+		
 	}
 
 }
