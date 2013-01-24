@@ -15,16 +15,15 @@ public class ProxyAO implements IProxyAO {
 		executor = Executors.newFixedThreadPool(10);
 	}
 
-	public IUpdate createUpdateObject(ISensor sensor, IDisplay display) {
+	public Future<?> createUpdateObject(ISensor sensor, IDisplay display) {
 		IUpdate update = new Update();
 		update.setName("ProxyAO update instance");
 		
 		update.setSubject(sensor);
 		update.setObserver(display);
 		//(Future<?>)
-		executor.submit(update);
 //		ExecutorService executor = Executors.newSingleThreadExecutor();
-		return update;
+		return executor.submit(update);
 	}
 	
 	public List<Future<Object>> invokeAll(List<IUpdate> tasks) throws InterruptedException {

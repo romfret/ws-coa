@@ -22,10 +22,10 @@ public class AtomicDiffusion implements IDiffusion {
 	private IProxyAO proxyAO;
 	@SuppressWarnings("rawtypes")
 	private List<IObserver> observers;
-	List<IUpdate> tasks;
+	List<Future<?>> tasks;
 	
 	public AtomicDiffusion() {
-		tasks = new ArrayList<IUpdate>();
+		tasks = new ArrayList<Future<?>>();
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -57,6 +57,13 @@ public class AtomicDiffusion implements IDiffusion {
 			tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
 		}
 		List<Future<Object>> tots=null;
+		
+		
+		// attendre les display
+		for (Future<?> task : tasks){
+			while(!task.isDone());
+		}
+		
 		
 
 		long d = System.currentTimeMillis();

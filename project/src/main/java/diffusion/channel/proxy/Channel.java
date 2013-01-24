@@ -41,6 +41,12 @@ public class Channel implements ISensor, IDisplay {
 		
 		time = (long) (500 + Math.random() * 10000);
 		scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
+		try {
+			Thread.sleep(time);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(this);
 		
