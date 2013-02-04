@@ -23,12 +23,17 @@ public class Display implements IDisplay {
 	}
 
 	public Future<Object> update(ISensor s) {
-		value = s.getValue();
-		version = s.getVersion();
-
-		System.err.println(this);
-		displayGUI.setValue(value);
-		displayGUI.setVersion(version);
+		long newVersion = s.getVersion();
+		
+		// Epoque test
+		if (newVersion > version) {
+			value = s.getValue();
+			version = s.getVersion();
+	
+			System.err.println(this);
+			displayGUI.setValue(value);
+			displayGUI.setVersion(version);
+		}
 		
 		Future<Object> f = new Future<Object>() {
 			public String toString() {

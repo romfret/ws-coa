@@ -14,6 +14,9 @@ import diffusion.sensor.ISensor;
  *
  */
 public class PeriodDiffusion implements IDiffusion {
+	
+	private int sensorValue;
+	private long version;
 
 	private ISensor sensor;
 	private IProxyAO proxyAO;
@@ -35,5 +38,21 @@ public class PeriodDiffusion implements IDiffusion {
 		for (IObserver observer : observers) {
 			proxyAO.createUpdateObject(sensor, (IDisplay)observer);
 		}
+	}
+
+	public void setSensorValue(int sensorValue) {
+		this.sensorValue = sensorValue;
+	}
+
+	public int getSensorValue() {
+		return sensorValue;
+	}
+
+	public long getVersion() {
+		return version;
+	}
+	
+	public void setVersion(long version) {
+		this.version = version;
 	}
 }

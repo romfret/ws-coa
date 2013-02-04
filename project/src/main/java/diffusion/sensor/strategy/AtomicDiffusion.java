@@ -17,6 +17,9 @@ import diffusion.sensor.ISensor;
  */
 public class AtomicDiffusion implements IDiffusion {
 
+	private int sensorValue;
+	private long version;
+	
 	private ISensor sensor;
 	private IProxyAO proxyAO;
 	@SuppressWarnings("rawtypes")
@@ -32,19 +35,6 @@ public class AtomicDiffusion implements IDiffusion {
 		this.sensor = sensor;
 		this.observers = observers;
 	}
-	
-	/**
-	 * TODO : 
-	 * Voir PC Strategy sur developpez.com. PC ayant pour but de faire varier une partie de l'algo du context suivant une strategie.
-	 * => C'est lors de l'instanciation du context (Sensor) qu'une strategie lui est passee en parametre.
-	 * C'est le context qui lancera la strategie :
-	 * 
-	 * // Dans Sensor 
-	 * public void operation() {
-	 * 		strategie.operationSpecifiqueDeDiffusion(); // Diffusion atomique, sequentiel et epoque suivant la strategie. 
-	 * }
-	 * 
-	 */
 
 	@SuppressWarnings("rawtypes")
 	public void execute() {
@@ -64,22 +54,22 @@ public class AtomicDiffusion implements IDiffusion {
 			e.printStackTrace();
 		}
 		
-		
-//		// attendre les display
-//		for (Future<?> task : tasks){
-//			try {
-//				while(! ( (Future<?>) task.get() ).isDone() ){}
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			} catch (ExecutionException e) {
-//				e.printStackTrace();
-//			};
-//		}
-		
-		System.out.println("==============================================================================");
+	}
 
-		
-		
+	public void setSensorValue(int sensorValue) {
+		this.sensorValue = sensorValue;
+	}
+
+	public int getSensorValue() {
+		return sensorValue;
+	}
+
+	public long getVersion() {
+		return version;
+	}
+
+	public void setVersion(long version) {
+		this.version = version;
 	}
 
 }
