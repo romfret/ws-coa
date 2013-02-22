@@ -3,7 +3,6 @@ package diffusion.display.ihm;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -15,10 +14,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
+import diffusion.sensor.ISensor;
+import diffusion.sensor.Sensor;
+
 public class Ihm extends JFrame implements IIhm {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel panelDisplay;
+
+	private ISensor sensor;
 	
 	public Ihm(){
 		super("Notre plus belle IHM");
@@ -45,6 +49,18 @@ public class Ihm extends JFrame implements IIhm {
 		panelWest.add(atomicBtn);
 		panelWest.add(periodBtn);
 		panelWest.add(sequentialBtn);
+		
+		atomicBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				((Sensor) sensor).setDiffusion(0);
+			}
+		});
+		
+		sequentialBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				((Sensor) sensor).setDiffusion(1);
+			}
+		});
 		
 		JButton addBtn = new JButton("Add");
 		addBtn.addActionListener(new ActionListener() {
@@ -85,5 +101,9 @@ public class Ihm extends JFrame implements IIhm {
 
 	public void addDisplay(DisplayGUI display) {
 		panelDisplay.add(display);
+	}
+
+	public void setSensor(ISensor sensor) {
+		this.sensor = sensor;
 	}
 }

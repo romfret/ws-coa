@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import diffusion.observer.IObserver;
+import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.IDiffusion;
 import diffusion.sensor.strategy.SequentialDiffusion;
 
@@ -25,8 +26,8 @@ public class Sensor implements ISensor {
 		observers = new ArrayList<IObserver>();
 		
 		// Etablir une regle de choix de la strategie
-		diffusion = new SequentialDiffusion();
-//		diffusion = new AtomicDiffusion();
+		//diffusion = new SequentialDiffusion();
+		diffusion = new AtomicDiffusion();
 		diffusion.configure(this, observers);
 	}
 	
@@ -57,11 +58,18 @@ public class Sensor implements ISensor {
 		diffusion.setVersion(version);
 		
 		updateObservers();
-	
 	}
 	
 	public long getVersion() {
 		return diffusion.getVersion();
 	}
 
+	public void setDiffusion(int i){
+		if(i==0){
+			diffusion = new AtomicDiffusion();
+		} else if (i==1){
+			diffusion = new SequentialDiffusion();
+		}
+		diffusion.configure(this, observers);
+	}
 }

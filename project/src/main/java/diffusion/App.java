@@ -22,8 +22,6 @@ public class App {
 	public static final int PERIOD_DIFFUSION = 3;
 	
 	public static void main(String[] args) {
-		
-		
 		IDisplay display1 = new Display("Display_1");
 		IDisplay display2 = new Display("Display_2");
 		IDisplay display3 = new Display("Display_3");
@@ -45,5 +43,7 @@ public class App {
 		Clock h = new Clock();
 		h.periodicallyActivate(sensor, 1000);
 		
+		// TODO BETTER
+		ihm.setSensor(sensor);
 	}
 }

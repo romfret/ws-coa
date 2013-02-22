@@ -24,4 +24,5 @@ public interface ISensor extends ISubject {
 	 * @return
 	 */
 	public long getVersion();
+
 }

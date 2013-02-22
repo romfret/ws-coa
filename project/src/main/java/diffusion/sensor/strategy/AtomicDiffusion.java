@@ -41,11 +41,9 @@ public class AtomicDiffusion implements IDiffusion {
 		tasks.clear();
 		proxyAO = new ProxyAO();
 		
-		
 		for (IObserver observer : observers) {
 			tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
 		}
-		
 		
 		try {
 			// Attente passive
