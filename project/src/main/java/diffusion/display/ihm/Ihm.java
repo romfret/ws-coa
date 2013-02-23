@@ -58,7 +58,8 @@ public class Ihm extends JFrame implements IIhm {
 		radioButtonGroup.add(atomicBtn);
 		radioButtonGroup.add(sequentialBtn);
 		radioButtonGroup.add(periodBtn);
-		periodBtn.setSelected(true); // Default strategy button (if you want to change, change also the default strategy in Sensor)
+		// Default strategy button (if you want to change, change also the default strategy in Sensor)
+		periodBtn.setSelected(true);
 		
 		JPanel panelBtnDisplay = new JPanel();
 		panelBtnDisplay.setLayout(new BoxLayout(panelBtnDisplay, BoxLayout.Y_AXIS));
