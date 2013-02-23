@@ -51,7 +51,7 @@ public class Sensor implements ISensor {
 	}
 
 	public void tick() {
-		System.out.println("Tick");
+		System.out.println("== Sensor value changed ==");
 		version++;
 		value = (int) (Math.random() * 100);
 
