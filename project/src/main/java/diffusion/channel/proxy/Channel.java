@@ -17,7 +17,7 @@ import diffusion.sensor.ISensor;
  * @author Douchement & Le Ho
  *
  */
-public class Channel implements ISensor, IDisplay {
+public class Channel implements IChannel {
 
 	private String name;
 	private ISensor subject;
@@ -110,11 +110,8 @@ public class Channel implements ISensor, IDisplay {
 		return observer.getPresentation();
 	}
 
-
-
-	public void update() {
-		// TODO Auto-generated method stub
-		
+	public void setDiffusion(int diffusionId) {
+		subject.setDiffusion(diffusionId);
 	}
 
 

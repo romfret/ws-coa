@@ -3,15 +3,17 @@ package diffusion.sensor;
 import java.util.ArrayList;
 import java.util.List;
 
+import diffusion.App;
 import diffusion.observer.IObserver;
 import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.IDiffusion;
+import diffusion.sensor.strategy.PeriodDiffusion;
 import diffusion.sensor.strategy.SequentialDiffusion;
 
 /**
  * 
  * @author Douchement & Le Ho
- *
+ * 
  */
 public class Sensor implements ISensor {
 
@@ -20,17 +22,16 @@ public class Sensor implements ISensor {
 	private IDiffusion diffusion;
 	private int value;
 	private long version;
-	
+
 	@SuppressWarnings("rawtypes")
 	public Sensor() {
 		observers = new ArrayList<IObserver>();
-		
-		// Etablir une regle de choix de la strategie
-		//diffusion = new SequentialDiffusion();
-		diffusion = new AtomicDiffusion();
+
+		// Default strategy (if you want to change, change also the default button in Ihm)
+		diffusion = new PeriodDiffusion();
 		diffusion.configure(this, observers);
 	}
-	
+
 	@SuppressWarnings("rawtypes")
 	public void attach(IObserver o) {
 		observers.add(o);
@@ -52,24 +53,37 @@ public class Sensor implements ISensor {
 	public void tick() {
 		System.out.println("Tick");
 		version++;
-		value = (int) (Math.random()*100);
-		
+		value = (int) (Math.random() * 100);
+
 		diffusion.setSensorValue(value);
 		diffusion.setVersion(version);
-		
+
 		updateObservers();
 	}
-	
+
 	public long getVersion() {
 		return diffusion.getVersion();
 	}
 
-	public void setDiffusion(int i){
-		if(i==0){
+	public void setDiffusion(int diffusionId) {
+		switch (diffusionId) {
+		case App.ATOMIC_DIFFUSION:
 			diffusion = new AtomicDiffusion();
-		} else if (i==1){
+			System.out.println("========================== ATOMIC");
+			break;
+		case App.SEQUENTIAL_DIFFUSION:
 			diffusion = new SequentialDiffusion();
+			System.out.println("========================== SEQ");
+			break;
+		case App.PERIOD_DIFFUSION:
+			diffusion = new PeriodDiffusion();
+			System.out.println("========================== PERIOD");
+			break;
+		default:
+			System.out.println("Diffusion strategy unrecognized");
+			break;
 		}
+
 		diffusion.configure(this, observers);
 	}
 }

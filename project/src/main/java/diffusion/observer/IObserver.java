@@ -1,7 +1,6 @@
 package diffusion.observer;
 
 import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledFuture;
 
 /**
  * 

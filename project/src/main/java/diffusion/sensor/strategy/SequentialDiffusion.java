@@ -74,6 +74,7 @@ public class SequentialDiffusion implements IDiffusion {
 	/**
 	 * Test if all the display get the value without block the sensor
 	 */
+	@SuppressWarnings("unchecked")
 	private void testDone() {
 		done = true;
 		for (Future<?> task : tasks) {
