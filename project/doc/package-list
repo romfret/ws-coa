@@ -1,0 +1,10 @@
+diffusion
+diffusion.activeObject
+diffusion.channel.proxy
+diffusion.display
+diffusion.display.ihm
+diffusion.display.ihm.command
+diffusion.observer
+diffusion.sensor
+diffusion.sensor.strategy
+utils
