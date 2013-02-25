@@ -65,13 +65,15 @@ public class App {
 	public static void removeDisplay() {
 		int number = displays.size();
 		
-		IDisplay display = displays.get("Display_" + number);
-		IChannel channel = channels.get("Channel_" + number);
-		
-		ihm.removeDisplay(display.getPresentation());
-		sensor.detach(channel);
-		
-		displays.remove(display.getName());
-		channels.remove(channel.getName());
+		if (number > 0) {
+			IDisplay display = displays.get("Display_" + number);
+			IChannel channel = channels.get("Channel_" + number);
+			
+			ihm.removeDisplay(display.getPresentation());
+			sensor.detach(channel);
+			
+			displays.remove(display.getName());
+			channels.remove(channel.getName());
+		}
 	}
 }

@@ -80,7 +80,7 @@ public class Sensor implements ISensor {
 			System.out.println("========================== PERIOD");
 			break;
 		default:
-			System.out.println("Diffusion strategy unrecognized");
+			System.err.println("Diffusion strategy unrecognized");
 			break;
 		}
 

@@ -47,7 +47,7 @@ public class AtomicDiffusion implements IDiffusion {
 		
 		try {
 			// Attente passive
-			((ProxyAO) proxyAO).invokeAll(tasks);
+			proxyAO.invokeAll(tasks);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

@@ -36,7 +36,7 @@ public class PeriodDiffusion implements IDiffusion {
 	@SuppressWarnings("rawtypes")
 	public void execute() {
 		for (IObserver observer : observers) {
-			proxyAO.createUpdateObject(sensor, (IDisplay)observer);
+			proxyAO.createUpdateObject(sensor, (IDisplay) observer);
 		}
 	}
 

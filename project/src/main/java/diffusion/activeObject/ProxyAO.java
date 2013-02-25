@@ -17,6 +17,9 @@ public class ProxyAO implements IProxyAO {
 		executor = Executors.newFixedThreadPool(10);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.activeObject.IProxyAO#createUpdateObject(diffusion.sensor.ISensor, diffusion.display.IDisplay)
+	 */
 	public Future<?> createUpdateObject(ISensor sensor, IDisplay display) {
 		IUpdate update = new Update();
 		update.setName("ProxyAO update instance");
@@ -25,15 +28,16 @@ public class ProxyAO implements IProxyAO {
 		return executor.submit(update);
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.activeObject.IProxyAO#invokeAll(java.util.List)
+	 */
 	public List<Future<Object>> invokeAll(List<Future<?>> tasks) throws InterruptedException {
 		List<IUpdate> u = new ArrayList<IUpdate>();
 		for (Future<?> task : tasks) {
 			try {
-				System.out.println("futur");
 				@SuppressWarnings("unchecked")
 				Future<Object> future = (Future<Object>) ((Future<?>) task).get();
-				System.out.println("future"+future.get());
-//				u.add((IUpdate) future.get());
+				System.out.println("Future:"+future.get());
 			} catch (ExecutionException e) {
 				e.printStackTrace();
 			}

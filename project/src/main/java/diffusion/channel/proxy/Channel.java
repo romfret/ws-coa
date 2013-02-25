@@ -33,6 +33,9 @@ public class Channel implements IChannel {
 		scheduler = Executors.newScheduledThreadPool(10);
 	} 
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#createUpdate(diffusion.sensor.ISensor)
+	 */
 	public IUpdate createUpdate(ISensor sensor) {
 		this.subject = sensor;
 		update = new Update();
@@ -42,6 +45,9 @@ public class Channel implements IChannel {
 		return update;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#update(diffusion.sensor.ISensor)
+	 */
 	public Future<?> update(ISensor subject) {
 		
 		time = (long) (500 + Math.random() * 10000);
@@ -53,18 +59,30 @@ public class Channel implements IChannel {
 		return future;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getValue()
+	 */
 	public int getValue() {
 		return subject.getValue();
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#getName()
+	 */
 	public String getName() {
 		return name;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getVersion()
+	 */
 	public long getVersion() {
 		return subject.getVersion();
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		String timeStr = "";
@@ -88,33 +106,47 @@ public class Channel implements IChannel {
 		return "[" + name + "] - [Sensor Value = " + valueStr + "] - [Version : " + subject.getVersion() + "] - [" + timeStr + " ms]";
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#attach(diffusion.observer.IObserver)
+	 */
 	@SuppressWarnings("rawtypes")
 	public void attach(IObserver o) {
 		subject.attach(o);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#detach(diffusion.observer.IObserver)
+	 */
 	@SuppressWarnings("rawtypes")
 	public void detach(IObserver o) {
 		subject.detach(o);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#updateObservers()
+	 */
 	public void updateObservers() {
 		subject.updateObservers();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#tick()
+	 */
 	public void tick() {
 		subject.tick();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#getPresentation()
+	 */
 	public DisplayGUI getPresentation() {
 		return observer.getPresentation();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#setDiffusion(int)
+	 */
 	public void setDiffusion(int diffusionId) {
 		subject.setDiffusion(diffusionId);
 	}
-
-
-
-
 }
