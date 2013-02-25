@@ -32,24 +32,39 @@ public class Sensor implements ISensor {
 		diffusion.configure(this, observers);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#attach(diffusion.observer.IObserver)
+	 */
 	@SuppressWarnings("rawtypes")
 	public void attach(IObserver o) {
 		observers.add(o);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#detach(diffusion.observer.IObserver)
+	 */
 	@SuppressWarnings("rawtypes")
 	public void detach(IObserver o) {
 		observers.remove(o);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.observer.ISubject#updateObservers()
+	 */
 	public void updateObservers() {
 		diffusion.execute();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getValue()
+	 */
 	public int getValue() {
 		return diffusion.getSensorValue();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#tick()
+	 */
 	public void tick() {
 		System.out.println("== Sensor value changed ==");
 		version++;
@@ -61,10 +76,16 @@ public class Sensor implements ISensor {
 		updateObservers();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getVersion()
+	 */
 	public long getVersion() {
 		return diffusion.getVersion();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#setDiffusion(int)
+	 */
 	public void setDiffusion(int diffusionId) {
 		switch (diffusionId) {
 		case App.ATOMIC_DIFFUSION:

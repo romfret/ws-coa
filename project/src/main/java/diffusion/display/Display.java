@@ -9,6 +9,10 @@ import diffusion.activeObject.IUpdate;
 import diffusion.display.ihm.DisplayGUI;
 import diffusion.sensor.ISensor;
 
+/**
+ * @author taira
+ *
+ */
 public class Display implements IDisplay {
 	
 	private String name;
@@ -22,10 +26,13 @@ public class Display implements IDisplay {
 		displayGUI = new DisplayGUI(name);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#update(diffusion.sensor.ISensor)
+	 */
 	public Future<Object> update(ISensor s) {
 		long newVersion = s.getVersion();
 		
-		// Epoque test
+		// Epoque verification
 		if (newVersion > version) {
 			value = s.getValue();
 			version = s.getVersion();
@@ -41,29 +48,24 @@ public class Display implements IDisplay {
 			}
 
 			public boolean cancel(boolean mayInterruptIfRunning) {
-				// TODO Auto-generated method stub
 				return false;
 			}
 
 			public boolean isCancelled() {
-				// TODO Auto-generated method stub
 				return false;
 			}
 
 			public boolean isDone() {
-				// TODO Auto-generated method stub
 				return false;
 			}
 
 			public Object get() throws InterruptedException, ExecutionException {
-				// TODO Auto-generated method stub
 				return null;
 			}
 
 			public Object get(long timeout, TimeUnit unit)
 					throws InterruptedException, ExecutionException,
 					TimeoutException {
-				// TODO Auto-generated method stub
 				return null;
 			}
 		};
@@ -71,6 +73,9 @@ public class Display implements IDisplay {
 		return f;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#getName()
+	 */
 	public String getName() {
 		return name;
 	}
@@ -91,8 +96,10 @@ public class Display implements IDisplay {
 	}
 
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#createUpdate(diffusion.sensor.ISensor)
+	 */
 	public IUpdate createUpdate(ISensor sensor) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

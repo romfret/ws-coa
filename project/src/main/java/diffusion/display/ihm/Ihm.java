@@ -117,23 +117,38 @@ public class Ihm extends JFrame implements IIhm {
 		});
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.IIhm#addDisplay(diffusion.display.ihm.DisplayGUI)
+	 */
 	public void addDisplay(DisplayGUI display) {
 		panelDisplay.add(display);
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.IIhm#removeDisplay(diffusion.display.ihm.DisplayGUI)
+	 */
 	public void removeDisplay(DisplayGUI display) {
 		panelDisplay.remove(display);
 		panelDisplay.repaint();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.IIhm#setCommandDiffusion(diffusion.display.ihm.command.ICommandDiffusion)
+	 */
 	public void setCommandDiffusion(ICommandDiffusion diffusionCmd) {
 		this.diffusionCmd = diffusionCmd;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.IIhm#setCommandAddDisplay(diffusion.display.ihm.command.ICommand)
+	 */
 	public void setCommandAddDisplay(ICommand addDisplayCmd) {
 		this.addDisplayCmd = addDisplayCmd;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.IIhm#setCommandRemoveDisplay(diffusion.display.ihm.command.ICommand)
+	 */
 	public void setCommandRemoveDisplay(ICommand removeDisplayCmd) {
 		this.removeDisplayCmd = removeDisplayCmd;
 	}

@@ -10,6 +10,9 @@ public class CommandDiffusion implements ICommandDiffusion {
 		this.sensor = sensor;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.ihm.command.ICommandDiffusion#execute(int)
+	 */
 	public void execute(int diffusionId) {
 		sensor.setDiffusion(diffusionId);
 	}

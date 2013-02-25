@@ -33,18 +33,23 @@ public class SequentialDiffusion implements IDiffusion {
 		done = true;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#configure(diffusion.sensor.ISensor, java.util.List)
+	 */
 	@SuppressWarnings("rawtypes")
 	public void configure(ISensor sensor, List<IObserver> observers) {
 		this.sensor = sensor;
 		this.observers = observers;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#execute()
+	 */
 	@SuppressWarnings("rawtypes")
 	public void execute() {
 		if (done) {
 			tasks.clear();
 			proxyAO = new ProxyAO();
-			
 			
 			for (IObserver observer : observers) {
 				tasks.add(proxyAO.createUpdateObject(sensor, (IDisplay)observer));
@@ -52,20 +57,32 @@ public class SequentialDiffusion implements IDiffusion {
 		}
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#setSensorValue(int)
+	 */
 	public void setSensorValue(int sensorValue) {
 		testDone();
 		if (done)
 			this.sensorValue = sensorValue;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#getSensorValue()
+	 */
 	public int getSensorValue() {
 		return sensorValue;
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#getVersion()
+	 */
 	public long getVersion() {
 		return version;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.strategy.IDiffusion#setVersion(long)
+	 */
 	public void setVersion(long version) {
 		if (done)
 			this.version = version;
@@ -89,5 +106,4 @@ public class SequentialDiffusion implements IDiffusion {
 			}
 		}
 	}
-
 }
