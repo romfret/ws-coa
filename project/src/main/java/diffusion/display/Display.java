@@ -87,6 +87,13 @@ public class Display implements IDisplay {
 		return value;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#getVersion()
+	 */
+	public long getVersion() {
+		return version;
+	}
+	
 	@Override
 	public String toString() {
 		String valueStr = "";

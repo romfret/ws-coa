@@ -39,10 +39,6 @@ public class ValueTests {
 		
 		sensor.attach(channel1);
 		sensor.attach(channel2);
-		
-
-		
-
 	}
 
 	/**
@@ -77,14 +73,21 @@ public class ValueTests {
 		
 		sensor.setDiffusion(App.SEQUENTIAL_DIFFUSION);
 		sensor.tick();
-		timer.periodicallyActivate(sensor, 2d);
+		timer.periodicallyActivate(sensor, 1000d);
 		
 		int valueSensor = sensor.getValue();
+		
+		// Wait that displays get their own value
+		boolean done = false;
+		while (!done) {
+			if (display1.getVersion() > 0 && display2.getVersion() > 0)
+				done = true;
+		}
 		
 		int valueDisplay1 = display1.getValue();
 		int valueDisplay2 = display2.getValue();
 		
-		System.out.println("s: " + valueSensor + "     d1: " + valueDisplay1 + "     d2: " + valueDisplay2);
+//		System.out.println("s: " + valueSensor + "     d1: " + valueDisplay1 + "     d2: " + valueDisplay2);
 		assertEquals("Values consistency : sensor - display", valueSensor, valueDisplay1);
 		assertEquals("Values consistency : display1 - display2", valueDisplay1, valueDisplay2);
 		
