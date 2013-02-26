@@ -80,6 +80,13 @@ public class Display implements IDisplay {
 		return name;
 	}
 	
+	/* (non-Javadoc)
+	 * @see diffusion.display.IDisplay#getValue()
+	 */
+	public int getValue() {
+		return value;
+	}
+	
 	@Override
 	public String toString() {
 		String valueStr = "";

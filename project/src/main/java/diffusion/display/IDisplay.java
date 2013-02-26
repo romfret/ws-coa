@@ -21,5 +21,7 @@ public interface IDisplay extends IObserver<ISensor> {
 	public DisplayGUI getPresentation();
 
 	public IUpdate createUpdate(ISensor sensor);
+	
+	public int getValue();
 
 }
