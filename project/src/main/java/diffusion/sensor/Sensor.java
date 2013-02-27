@@ -76,7 +76,6 @@ public class Sensor implements ISensor {
 		System.out.println("== Sensor value changed ==");
 		version++;
 		value = (int) (Math.random() * 100);
-		System.out.println(value+" - "+version);
 
 		diffusion.setSensorValue(value);
 		diffusion.setVersion(version);
@@ -121,5 +120,9 @@ public class Sensor implements ISensor {
 		}
 
 		diffusion.configure(this, observers);
+	}
+	
+	public IDiffusion getDiffusion() {
+		return diffusion;
 	}
 }

@@ -1,6 +1,7 @@
 package diffusion.sensor;
 
 import diffusion.observer.ISubject;
+import diffusion.sensor.strategy.IDiffusion;
 
 /**
  * 
@@ -42,4 +43,10 @@ public interface ISensor extends ISubject {
 	 * @param diffusionId
 	 */
 	public void setDiffusion(int diffusionId);
+	
+	/**
+	 * Return the instanced strategy
+	 * @return
+	 */
+	public IDiffusion getDiffusion();
 }

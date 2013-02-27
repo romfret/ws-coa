@@ -128,7 +128,6 @@ public class SequentialDuffusionTests {
 		// Value just after display getValue
 		long sensorEndVersion = sensor.getRealSensorVersion();
 		
-		System.err.println("s1: "+sensorStartVersion+"    s2: "+sensorEndVersion);
 		assertTrue("Version consistency : sensor state", (sensorStartVersion < sensorEndVersion));
 	}
 

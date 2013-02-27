@@ -17,7 +17,7 @@ public class Display implements IDisplay {
 	
 	private String name;
 	private int value;
-	public long version;
+	private long version;
 	
 	private DisplayGUI displayGUI;
 

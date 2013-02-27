@@ -11,6 +11,7 @@ import diffusion.display.IDisplay;
 import diffusion.display.ihm.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
+import diffusion.sensor.strategy.IDiffusion;
 
 /**
  * 
@@ -49,12 +50,10 @@ public class Channel implements IChannel {
 	 * @see diffusion.display.IDisplay#update(diffusion.sensor.ISensor)
 	 */
 	public Future<?> update(ISensor subject) {
-		
 		time = (long) (500 + Math.random() * 10000);
 		Future<Object> future = scheduler.schedule(update, time, TimeUnit.MILLISECONDS);
 		
 		System.out.println(this);
-		
 		
 		return future;
 	}
@@ -150,11 +149,26 @@ public class Channel implements IChannel {
 		subject.setDiffusion(diffusionId);
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getRealSensorValue()
+	 */
 	public int getRealSensorValue() {
+		System.out.println(subject);
 		return subject.getRealSensorValue();
 	}
 
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getRealSensorVersion()
+	 */
 	public long getRealSensorVersion() {
 		return subject.getRealSensorVersion();
 	}
+
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getDiffusion()
+	 */
+	public IDiffusion getDiffusion() {
+		return subject.getDiffusion();
+	}
+
 }
