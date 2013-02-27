@@ -82,7 +82,7 @@ public class SequentialDuffusionTests {
 	 * Test the Sequential diffusion between two displays
 	 */
 	@Test
-	public void testtestValuesConsistencyBetweenTwoDisplays() {
+	public void testValuesConsistencyBetweenTwoDisplays() {
 
 		sensor.tick();
 		timer.periodicallyActivate(sensor, 1000d);
@@ -108,7 +108,7 @@ public class SequentialDuffusionTests {
 	 * Test the Sequential diffusion between two displays
 	 */
 	@Test
-	public void testtestValuesConsistencySensorDontChanchedItsValueDuringTheDisplaysGetValue() {
+	public void testValuesConsistencySensorDontChangedItsValueDuringTheDisplaysGetValue() {
 		sensor.tick();
 		timer.periodicallyActivate(sensor, 1000d);
 		

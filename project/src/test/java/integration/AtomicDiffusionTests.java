@@ -75,7 +75,7 @@ public class AtomicDiffusionTests {
 	 * Test the Atomic diffusion between two displays
 	 */
 	@Test
-	public void testtestValuesConsistencyBetweenTwoDisplays() {
+	public void testValuesConsistencyBetweenTwoDisplays() {
 		sensor.tick();
 		timer.periodicallyActivate(sensor, 2d);
 		
@@ -93,7 +93,7 @@ public class AtomicDiffusionTests {
 	 * Test the Atomic diffusion between two displays
 	 */
 	@Test
-	public void testtestValuesConsistencySensorDontChanchedItsValueDuringTheDisplaysGetValue() {
+	public void testValuesConsistencySensorDontChangedItsValueDuringTheDisplaysGetValue() {
 		sensor.tick();
 		timer.periodicallyActivate(sensor, 2d);
 		
