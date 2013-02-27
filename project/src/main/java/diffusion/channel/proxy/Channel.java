@@ -149,4 +149,12 @@ public class Channel implements IChannel {
 	public void setDiffusion(int diffusionId) {
 		subject.setDiffusion(diffusionId);
 	}
+
+	public int getRealSensorValue() {
+		return subject.getRealSensorValue();
+	}
+
+	public long getRealSensorVersion() {
+		return subject.getRealSensorVersion();
+	}
 }

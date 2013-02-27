@@ -61,6 +61,13 @@ public class Sensor implements ISensor {
 	public int getValue() {
 		return diffusion.getSensorValue();
 	}
+	
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getRealSensorValue()
+	 */
+	public int getRealSensorValue() {
+		return value;
+	}
 
 	/* (non-Javadoc)
 	 * @see diffusion.sensor.ISensor#tick()
@@ -69,7 +76,7 @@ public class Sensor implements ISensor {
 		System.out.println("== Sensor value changed ==");
 		version++;
 		value = (int) (Math.random() * 100);
-		System.out.println(value);
+		System.out.println(value+" - "+version);
 
 		diffusion.setSensorValue(value);
 		diffusion.setVersion(version);
@@ -82,6 +89,13 @@ public class Sensor implements ISensor {
 	 */
 	public long getVersion() {
 		return diffusion.getVersion();
+	}
+	
+	/* (non-Javadoc)
+	 * @see diffusion.sensor.ISensor#getRealSensorVersion()
+	 */
+	public long getRealSensorVersion() {
+		return version;
 	}
 
 	/* (non-Javadoc)

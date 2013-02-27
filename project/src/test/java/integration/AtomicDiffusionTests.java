@@ -98,15 +98,15 @@ public class AtomicDiffusionTests {
 		timer.periodicallyActivate(sensor, 2d);
 		
 		// Value before display getValue
-		int sensorStartValue = sensor.getValue();
-		long sensorStartVersion = sensor.getVersion();
+		int sensorStartValue = sensor.getRealSensorValue();
+		long sensorStartVersion = sensor.getRealSensorVersion();
 		
 		display1.getValue();
 		display2.getValue();
 		
 		// Value just after display getValue
-		int sensorEndValue = sensor.getValue();
-		long sensorEndVersion = sensor.getVersion();
+		int sensorEndValue = sensor.getRealSensorValue();
+		long sensorEndVersion = sensor.getRealSensorVersion();
 		
 		assertEquals("Values consistency : sensor state", sensorStartValue, sensorEndValue);
 		assertEquals("Version consistency : sensor state", sensorStartVersion, sensorEndVersion);

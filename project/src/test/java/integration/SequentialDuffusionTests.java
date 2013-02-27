@@ -51,58 +51,58 @@ public class SequentialDuffusionTests {
 		System.out.println("<<<<--------------------");
 	}
 	
-//	/**
-//	 * Test the Sequential diffusion between sensor and display
-//	 */
-//	@Test
-//	public void testValuesConsistencyBetweenSensorAndDisplay() {
-//		sensor.tick();
-//		timer.periodicallyActivate(sensor, 1000d);
-//		
-//		int sensorValue = sensor.getValue();
-//		long sensorVersion = sensor.getVersion();
-//		
-//		// Wait that displays get their own value
-//		boolean done = false;
-//		while (!done) {
-//			if (display1.getVersion() > 0 && display2.getVersion() > 0)
-//				done = true;
-//		}
-//		
-//		int valueDisplay1 = display1.getValue();
-//		long display1Version = display1.getVersion();
-//		
-//		display2.getValue();
-//		
-//		assertEquals("Values consistency : sensor - display", sensorValue, valueDisplay1);
-//		assertEquals("Version consistency : sensor - display", sensorVersion, display1Version);
-//	}
-//	
-//	/**
-//	 * Test the Sequential diffusion between two displays
-//	 */
-//	@Test
-//	public void testtestValuesConsistencyBetweenTwoDisplays() {
-//
-//		sensor.tick();
-//		timer.periodicallyActivate(sensor, 1000d);
-//		
-//		// Wait that displays get their own value
-//		boolean done = false;
-//		while (!done) {
-//			if (display1.getVersion() > 0 && display2.getVersion() > 0)
-//				done = true;
-//		}
-//		
-//		int display1Value = display1.getValue();
-//		long display1Version = display1.getVersion();
-//		
-//		int display2Value = display2.getValue();
-//		long display2Version = display2.getVersion();
-//		
-//		assertEquals("Values consistency : display1 - display2", display1Value, display2Value);
-//		assertEquals("Version consistency : display1 - display2", display1Version, display2Version);
-//	}
+	/**
+	 * Test the Sequential diffusion between sensor and display
+	 */
+	@Test
+	public void testValuesConsistencyBetweenSensorAndDisplay() {
+		sensor.tick();
+		timer.periodicallyActivate(sensor, 1000d);
+		
+		int sensorValue = sensor.getValue();
+		long sensorVersion = sensor.getVersion();
+		
+		// Wait that displays get their own value
+		boolean done = false;
+		while (!done) {
+			if (display1.getVersion() > 0 && display2.getVersion() > 0)
+				done = true;
+		}
+		
+		int valueDisplay1 = display1.getValue();
+		long display1Version = display1.getVersion();
+		
+		display2.getValue();
+		
+		assertEquals("Values consistency : sensor - display", sensorValue, valueDisplay1);
+		assertEquals("Version consistency : sensor - display", sensorVersion, display1Version);
+	}
+	
+	/**
+	 * Test the Sequential diffusion between two displays
+	 */
+	@Test
+	public void testtestValuesConsistencyBetweenTwoDisplays() {
+
+		sensor.tick();
+		timer.periodicallyActivate(sensor, 1000d);
+		
+		// Wait that displays get their own value
+		boolean done = false;
+		while (!done) {
+			if (display1.getVersion() > 0 && display2.getVersion() > 0)
+				done = true;
+		}
+		
+		int display1Value = display1.getValue();
+		long display1Version = display1.getVersion();
+		
+		int display2Value = display2.getValue();
+		long display2Version = display2.getVersion();
+		
+		assertEquals("Values consistency : display1 - display2", display1Value, display2Value);
+		assertEquals("Version consistency : display1 - display2", display1Version, display2Version);
+	}
 	
 	/**
 	 * Test the Sequential diffusion between two displays
@@ -113,8 +113,7 @@ public class SequentialDuffusionTests {
 		timer.periodicallyActivate(sensor, 1000d);
 		
 		// Value before display getValue
-		int sensorStartValue = sensor.getValue();
-		long sensorStartVersion = sensor.getVersion();
+		long sensorStartVersion = sensor.getRealSensorVersion();
 		
 		// Wait that displays get their own value
 		boolean done = false;
@@ -127,14 +126,10 @@ public class SequentialDuffusionTests {
 		display2.getValue();
 		
 		// Value just after display getValue
-		int sensorEndValue = sensor.getValue();
-		long sensorEndVersion = sensor.getVersion();
+		long sensorEndVersion = sensor.getRealSensorVersion();
 		
-		System.err.println("s1: "+sensorStartValue+", "+sensorStartVersion+"    s2: "+sensorEndValue+", "+sensorEndVersion);
-//		assertEquals("Values consistency : sensor state", sensorStartValue, sensorEndValue);
-		assertFalse("Values consistency : sensor state", (sensorStartValue != sensorEndValue));
-//		assertEquals("Version consistency : sensor state", sensorStartVersion, sensorEndVersion);
-		assertFalse("Version consistency : sensor state", (sensorStartVersion > sensorEndVersion));
+		System.err.println("s1: "+sensorStartVersion+"    s2: "+sensorEndVersion);
+		assertTrue("Version consistency : sensor state", (sensorStartVersion < sensorEndVersion));
 	}
 
 }
