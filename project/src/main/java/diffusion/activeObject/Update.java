@@ -41,4 +41,12 @@ public class Update implements IUpdate {
 	public String getName() {
 		return name;
 	}
+
+	public IDisplay getObserver() {
+		return display;
+	}
+
+	public ISensor getSubject() {
+		return sensor;
+	}
 }

@@ -1,15 +1,23 @@
 package diffusion.activeObject;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import diffusion.display.Display;
+import diffusion.display.IDisplay;
+import diffusion.sensor.ISensor;
+import diffusion.sensor.Sensor;
+
 public class UpdateTest {
+	
+	private IUpdate update;
 
 	@Before
 	public void setUp() throws Exception {
+		update = new Update();
 	}
 
 	@After
@@ -21,7 +29,9 @@ public class UpdateTest {
 	 */
 	@Test
 	public void testGetSetObserver() {
-		fail("Not yet implemented");
+		IDisplay display = new Display("A");
+		update.setObserver(display);
+		assertEquals("testGetSetObserver", display, update.getObserver());
 	}
 
 	/**
@@ -29,7 +39,9 @@ public class UpdateTest {
 	 */
 	@Test
 	public void testGetSetSubject() {
-		fail("Not yet implemented");
+		ISensor subject = new Sensor();
+		update.setSubject(subject);
+		assertEquals("testGetSetSubject", subject, update.getSubject());
 	}
 
 	/**
@@ -37,6 +49,7 @@ public class UpdateTest {
 	 */
 	@Test
 	public void testGetSetName() {
-		fail("Not yet implemented");
+		update.setName("name");
+		assertEquals("testGetSetName", "name", update.getName());
 	}
 }

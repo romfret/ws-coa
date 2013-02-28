@@ -31,4 +31,16 @@ public interface IUpdate extends Callable<Object> {
 	 * Get the name of the Update instance
 	 */
 	public String getName();
+
+	/**
+	 * return the current observer
+	 * @return
+	 */
+	public IDisplay getObserver();
+
+	/**
+	 * return the current subject
+	 * @return
+	 */
+	public ISensor getSubject();
 }

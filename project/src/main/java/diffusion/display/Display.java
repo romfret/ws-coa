@@ -44,7 +44,7 @@ public class Display implements IDisplay {
 		
 		Future<Object> f = new Future<Object>() {
 			public String toString() {
-				return "TROLOLOLO dans un Future factice renvoyé par Display.update(..)";
+				return "Future factice";
 			}
 
 			public boolean cancel(boolean mayInterruptIfRunning) {

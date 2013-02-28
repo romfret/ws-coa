@@ -7,9 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class DisplayGUITest {
+	
+	private DisplayGUI gui;
 
 	@Before
 	public void setUp() throws Exception {
+		gui = new DisplayGUI("A");
 	}
 
 	@After
@@ -21,7 +24,9 @@ public class DisplayGUITest {
 	 */
 	@Test
 	public void testGetSetValue() {
-		fail("Not yet implemented");
+		int nb = 12;
+		gui.setValue(nb);
+		assertEquals("testGetSetValue", nb, gui.getValue());
 	}
 
 	/**
@@ -29,6 +34,8 @@ public class DisplayGUITest {
 	 */
 	@Test
 	public void testGetSetVersion() {
-		fail("Not yet implemented");
+		long version = 1234;
+		gui.setVersion(version);
+		assertEquals("testGetSetVersion", version, gui.getVersion());
 	}
 }

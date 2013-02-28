@@ -15,7 +15,7 @@ import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
-public class SequentialDuffusionIntegrationTest {
+public class SequentialDiffusionIntegrationTest {
 
 	private ISensor sensor;
 	private IChannel channel1;
