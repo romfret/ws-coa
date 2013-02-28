@@ -1,6 +1,7 @@
 package gui.command;
 
-import diffusion.App;
+import main.App;
+
 
 public class CommandAddDisplay implements ICommand {
 

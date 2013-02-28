@@ -2,14 +2,12 @@ package diffusion.sensor;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import main.App;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import diffusion.App;
-import diffusion.sensor.ISensor;
-import diffusion.sensor.Sensor;
 import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.PeriodDiffusion;
 import diffusion.sensor.strategy.SequentialDiffusion;

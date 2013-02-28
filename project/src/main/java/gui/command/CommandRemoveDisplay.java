@@ -1,6 +1,6 @@
 package gui.command;
 
-import diffusion.App;
+import main.App;
 
 
 public class CommandRemoveDisplay implements ICommand {

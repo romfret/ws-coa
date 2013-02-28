@@ -3,7 +3,7 @@ package diffusion.sensor;
 import java.util.ArrayList;
 import java.util.List;
 
-import diffusion.App;
+import main.App;
 import diffusion.observer.IObserver;
 import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.IDiffusion;

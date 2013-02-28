@@ -1,4 +1,5 @@
-package diffusion;
+package main;
+
 
 import gui.GlobalGUI;
 import gui.command.CommandAddDisplay;

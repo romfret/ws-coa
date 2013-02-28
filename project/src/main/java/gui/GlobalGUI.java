@@ -18,7 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-import diffusion.App;
+import main.App;
 
 public class GlobalGUI extends JFrame implements IGlobalGUI {
 	private static final long serialVersionUID = 1L;
