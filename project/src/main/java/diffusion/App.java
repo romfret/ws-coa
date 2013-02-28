@@ -8,10 +8,10 @@ import diffusion.channel.proxy.Channel;
 import diffusion.channel.proxy.IChannel;
 import diffusion.display.Display;
 import diffusion.display.IDisplay;
-import diffusion.display.ihm.Ihm;
-import diffusion.display.ihm.command.CommandAddDisplay;
-import diffusion.display.ihm.command.CommandDiffusion;
-import diffusion.display.ihm.command.CommandRemoveDisplay;
+import diffusion.display.gui.GlobalGUI;
+import diffusion.display.gui.command.CommandAddDisplay;
+import diffusion.display.gui.command.CommandDiffusion;
+import diffusion.display.gui.command.CommandRemoveDisplay;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
@@ -26,14 +26,14 @@ public class App {
 	public static final int SEQUENTIAL_DIFFUSION = 1;
 	public static final int PERIOD_DIFFUSION = 2;
 	
-	private static Ihm ihm;
+	private static GlobalGUI gui;
 	private static ISensor sensor;
 	private static Map<String, IDisplay> displays;
 	private static Map<String, IChannel> channels;
 	
 	public static void main(String[] args) {
-		// Instanciation of an Ihm, a sensors, displays and channels
-		ihm = new Ihm();
+		// Instanciation of an gui, a sensors, displays and channels
+		gui = new GlobalGUI();
 		sensor = new Sensor();
 		displays = new HashMap<String, IDisplay>();
 		channels = new HashMap<String, IChannel>();
@@ -42,10 +42,10 @@ public class App {
 		Clock h = new Clock();
 		h.periodicallyActivate(sensor, 1000);
 		
-		// Set the command for the Ihm interaction
-		ihm.setCommandDiffusion(new CommandDiffusion(sensor));
-		ihm.setCommandAddDisplay(new CommandAddDisplay());
-		ihm.setCommandRemoveDisplay(new CommandRemoveDisplay());
+		// Set the command for the gui interaction
+		gui.setCommandDiffusion(new CommandDiffusion(sensor));
+		gui.setCommandAddDisplay(new CommandAddDisplay());
+		gui.setCommandRemoveDisplay(new CommandRemoveDisplay());
 		
 		// Add 3 displays by default
 		addDisplay();
@@ -63,7 +63,7 @@ public class App {
 		IChannel channel = new Channel("Channel_" + number, display);
 		
 		sensor.attach(channel);
-		ihm.addDisplay(display.getPresentation());
+		gui.addDisplay(display.getPresentation());
 		
 		displays.put(display.getName(), display);
 		channels.put(channel.getName(), channel);
@@ -79,7 +79,7 @@ public class App {
 			IDisplay display = displays.get("Display_" + number);
 			IChannel channel = channels.get("Channel_" + number);
 			
-			ihm.removeDisplay(display.getPresentation());
+			gui.removeDisplay(display.getPresentation());
 			sensor.detach(channel);
 			
 			displays.remove(display.getName());

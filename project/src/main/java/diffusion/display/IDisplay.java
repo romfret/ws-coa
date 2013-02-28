@@ -3,7 +3,7 @@ package diffusion.display;
 import java.util.concurrent.Future;
 
 import diffusion.activeObject.IUpdate;
-import diffusion.display.ihm.DisplayGUI;
+import diffusion.display.gui.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 

@@ -1,4 +1,4 @@
-package diffusion.display.ihm;
+package diffusion.display.gui;
 
 import static org.junit.Assert.*;
 

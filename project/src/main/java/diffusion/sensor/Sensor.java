@@ -27,7 +27,7 @@ public class Sensor implements ISensor {
 	public Sensor() {
 		observers = new ArrayList<IObserver>();
 
-		// Default strategy (if you want to change, change also the default button in Ihm)
+		// Default strategy (if you want to change, change also the default button in GUI)
 		diffusion = new PeriodDiffusion();
 		diffusion.configure(this, observers);
 	}

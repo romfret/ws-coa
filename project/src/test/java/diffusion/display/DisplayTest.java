@@ -11,7 +11,7 @@ import org.junit.Test;
 import diffusion.App;
 import diffusion.display.Display;
 import diffusion.display.IDisplay;
-import diffusion.display.ihm.DisplayGUI;
+import diffusion.display.gui.DisplayGUI;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 

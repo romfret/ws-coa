@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import diffusion.activeObject.IUpdate;
-import diffusion.display.ihm.DisplayGUI;
+import diffusion.display.gui.DisplayGUI;
 import diffusion.sensor.ISensor;
 
 /**

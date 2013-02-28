@@ -1,10 +1,12 @@
-package diffusion.display.ihm;
+package diffusion.display.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -15,10 +17,10 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 import diffusion.App;
-import diffusion.display.ihm.command.ICommand;
-import diffusion.display.ihm.command.ICommandDiffusion;
+import diffusion.display.gui.command.ICommand;
+import diffusion.display.gui.command.ICommandDiffusion;
 
-public class Ihm extends JFrame implements IIhm {
+public class GlobalGUI extends JFrame implements IGlobalGUI {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel panelDisplay;
@@ -32,13 +34,17 @@ public class Ihm extends JFrame implements IIhm {
 	
 	private JButton addBtn;
 	private JButton delBtn;
+
+	private List<DisplayGUI> displays;
 	
-	public Ihm(){
-		super("Notre plus belle IHM");
+	public GlobalGUI(){
+		super("Our most beautiful GUI");
 		this.setSize(900, 600);
 		this.setResizable(false);
 		this.setLayout(new BorderLayout());
 
+		displays = new ArrayList<DisplayGUI>();
+		
 		initView();
 		configView();
 		registerListeners();
@@ -121,6 +127,7 @@ public class Ihm extends JFrame implements IIhm {
 	 * @see diffusion.display.ihm.IIhm#addDisplay(diffusion.display.ihm.DisplayGUI)
 	 */
 	public void addDisplay(DisplayGUI display) {
+		displays.add(display);
 		panelDisplay.add(display);
 	}
 	
@@ -128,6 +135,7 @@ public class Ihm extends JFrame implements IIhm {
 	 * @see diffusion.display.ihm.IIhm#removeDisplay(diffusion.display.ihm.DisplayGUI)
 	 */
 	public void removeDisplay(DisplayGUI display) {
+		displays.remove(display);
 		panelDisplay.remove(display);
 		panelDisplay.repaint();
 	}
@@ -151,6 +159,22 @@ public class Ihm extends JFrame implements IIhm {
 	 */
 	public void setCommandRemoveDisplay(ICommand removeDisplayCmd) {
 		this.removeDisplayCmd = removeDisplayCmd;
+	}
+
+	public List<DisplayGUI> getDisplays() {
+		return displays;
+	}
+
+	public ICommandDiffusion getCommandDiffusion() {
+		return diffusionCmd;
+	}
+
+	public ICommand getCommandAddDisplay() {
+		return addDisplayCmd;
+	}
+
+	public ICommand getCommandRemoveDisplay() {
+		return removeDisplayCmd;
 	}
 
 	

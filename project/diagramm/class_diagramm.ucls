@@ -73,25 +73,16 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="9" language="java" name="diffusion.display.ihm.command.ICommand" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/command/ICommand.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="91" y="934"/>    
+  <interface id="9" language="java" name="diffusion.display.gui.command.ICommand" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/command/ICommand.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="76" y="1329"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="10" language="java" name="diffusion.display.ihm.Ihm" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/Ihm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="170" y="414"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
-    </display>  
-  </class>  
-  <interface id="11" language="java" name="diffusion.activeObject.IUpdate" project="project" 
+  <interface id="10" language="java" name="diffusion.activeObject.IUpdate" project="project" 
     file="/project/src/main/java/diffusion/activeObject/IUpdate.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1858" y="248"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -100,7 +91,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="12" language="java" name="diffusion.activeObject.IProxyAO" project="project" 
+  <interface id="11" language="java" name="diffusion.activeObject.IProxyAO" project="project" 
     file="/project/src/main/java/diffusion/activeObject/IProxyAO.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1731" y="-319"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -109,17 +100,17 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="13" language="java" name="diffusion.display.ihm.command.CommandDiffusion" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/command/CommandDiffusion.java" binary="false" 
+  <class id="12" language="java" name="diffusion.display.gui.command.CommandDiffusion" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/command/CommandDiffusion.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="288" y="943"/>    
+    <position height="-1" width="-1" x="341" y="1095"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="14" language="java" name="diffusion.sensor.ISensor" project="project" 
+  <interface id="13" language="java" name="diffusion.sensor.ISensor" project="project" 
     file="/project/src/main/java/diffusion/sensor/ISensor.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="846" y="556"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -128,7 +119,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="15" language="java" name="diffusion.sensor.strategy.SequentialDiffusion" project="project" 
+  <class id="14" language="java" name="diffusion.sensor.strategy.SequentialDiffusion" project="project" 
     file="/project/src/main/java/diffusion/sensor/strategy/SequentialDiffusion.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="785" y="-1"/>    
@@ -138,7 +129,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="16" language="java" name="diffusion.observer.ISubject" project="project" 
+  <interface id="15" language="java" name="diffusion.observer.ISubject" project="project" 
     file="/project/src/main/java/diffusion/observer/ISubject.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="971" y="323"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -147,7 +138,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <interface id="17" language="java" name="diffusion.observer.IObserver" project="project" 
+  <interface id="16" language="java" name="diffusion.observer.IObserver" project="project" 
     file="/project/src/main/java/diffusion/observer/IObserver.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="519" y="527"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -156,17 +147,17 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="18" language="java" name="diffusion.display.ihm.command.CommandAddDisplay" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/command/CommandAddDisplay.java" binary="false" 
+  <class id="17" language="java" name="diffusion.display.gui.command.CommandAddDisplay" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/command/CommandAddDisplay.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="96" y="1107"/>    
+    <position height="-1" width="-1" x="92" y="964"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="19" language="java" name="diffusion.display.IDisplay" project="project" 
+  <interface id="18" language="java" name="diffusion.display.IDisplay" project="project" 
     file="/project/src/main/java/diffusion/display/IDisplay.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1582" y="1114"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -175,7 +166,7 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="20" language="java" name="diffusion.channel.proxy.Channel" project="project" 
+  <class id="19" language="java" name="diffusion.channel.proxy.Channel" project="project" 
     file="/project/src/main/java/diffusion/channel/proxy/Channel.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1593" y="723"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -184,26 +175,17 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <interface id="21" language="java" name="diffusion.display.ihm.IIhm" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/IIhm.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="178" y="58"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
-    </display>  
-  </interface>  
-  <interface id="22" language="java" name="diffusion.display.ihm.command.ICommandDiffusion" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/command/ICommandDiffusion.java" binary="false" 
+  <interface id="20" language="java" name="diffusion.display.gui.command.ICommandDiffusion" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/command/ICommandDiffusion.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="246" y="757"/>    
+    <position height="-1" width="-1" x="340" y="1219"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <class id="23" language="java" name="diffusion.sensor.strategy.AtomicDiffusion" project="project" 
+  <class id="21" language="java" name="diffusion.sensor.strategy.AtomicDiffusion" project="project" 
     file="/project/src/main/java/diffusion/sensor/strategy/AtomicDiffusion.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1420" y="-30"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -212,26 +194,17 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="diffusion.display.ihm.DisplayGUI" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/DisplayGUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1845" y="1347"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
-    </display>  
-  </class>  
-  <class id="25" language="java" name="diffusion.display.ihm.command.CommandRemoveDisplay" project="project" 
-    file="/project/src/main/java/diffusion/display/ihm/command/CommandRemoveDisplay.java" binary="false" 
+  <class id="22" language="java" name="diffusion.display.gui.command.CommandRemoveDisplay" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/command/CommandRemoveDisplay.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="290" y="1109"/>    
+    <position height="-1" width="-1" x="295" y="964"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="diffusion.display.Display" project="project" 
+  <class id="23" language="java" name="diffusion.display.Display" project="project" 
     file="/project/src/main/java/diffusion/display/Display.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1586" y="1346"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -240,289 +213,316 @@
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
+  <class id="24" language="java" name="diffusion.display.gui.DisplayGUI" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/DisplayGUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1295" y="1352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="diffusion.display.gui.GlobalGUI" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/GlobalGUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="583" y="1405"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="diffusion.display.gui.IGlobalGUI" project="project" 
+    file="/project/src/main/java/diffusion/display/gui/IGlobalGUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="964" y="1404"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
   <association id="27">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="28" name="sensor"/>      
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="28" name="addDisplayCmd"/>      
       <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="30">    
-    <bendpoint x="1489" y="1149"/>    
-    <bendpoint x="510" y="1141"/>    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <realization id="31">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <generalization id="32">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <association id="33">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="34" name="addDisplayCmd"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="36">    
-    <bendpoint x="1330" y="86"/>    
-    <bendpoint x="1327" y="240"/>    
-    <bendpoint x="526" y="244"/>    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="37" name="observers"/>      
-      <multiplicity id="38" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="39">    
-    <bendpoint x="1368" y="-316"/>    
+  <realization id="30">    
+    <bendpoint x="1419" y="-230"/>    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="31">    
+    <bendpoint x="883" y="-135"/>    
+    <bendpoint x="884" y="-226"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="32">    
+    <bendpoint x="1099" y="385"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="40" name="proxyAO"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
+      <attribute id="33" name="sensor"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="42">    
-    <bendpoint x="471" y="-294"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="43" name="diffusion"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
-    <bendpoint x="908" y="147"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="46" name="observers"/>      
-      <multiplicity id="47" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="49" name="diffusionCmd"/>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="22" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="51">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="52" name="observers"/>      
-      <multiplicity id="53" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="54">    
-    <end type="SOURCE" refId="25"/>    
+  <realization id="35">    
+    <end type="SOURCE" refId="22"/>    
     <end type="TARGET" refId="9"/>  
   </realization>  
-  <association id="55">    
-    <bendpoint x="1594" y="248"/>    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="56" name="update"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
+  <generalization id="36">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="38">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="39" name="observer"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="42" name="diffusionCmd"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <bendpoint x="799" y="-421"/>    
+    <bendpoint x="1730" y="-413"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="45" name="proxyAO"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="58">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="21"/>  
-  </realization>  
-  <realization id="59">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <association id="60">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="61" name="sensor"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="63">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="16"/>  
-  </generalization>  
-  <realization id="64">    
-    <bendpoint x="1419" y="-230"/>    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="65">    
-    <bendpoint x="799" y="-421"/>    
-    <bendpoint x="1730" y="-413"/>    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="66" name="proxyAO"/>      
-      <multiplicity id="67" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="68">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="69" name="observers"/>      
-      <multiplicity id="70" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="71">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="22"/>  
-  </realization>  
-  <association id="72">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="73" name="channels"/>      
-      <multiplicity id="74" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="75">    
-    <end type="SOURCE" refId="26" navigable="false">      
-      <attribute id="76" name="displayGUI"/>      
-      <multiplicity id="77" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="78">    
-    <bendpoint x="765" y="1091"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="79" name="displays"/>      
-      <multiplicity id="80" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="81">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="19"/>  
-  </generalization>  
-  <realization id="82">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="83">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="84" name="ihm"/>      
-      <multiplicity id="85" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="86">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="19"/>  
-  </realization>  
-  <association id="87">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="88" name="observer"/>      
-      <multiplicity id="89" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="90">    
-    <bendpoint x="1099" y="385"/>    
+  <association id="47">    
+    <bendpoint x="908" y="147"/>    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="91" name="sensor"/>      
-      <multiplicity id="92" minimum="0" maximum="1"/>    
+      <attribute id="48" name="observers"/>      
+      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="93">    
+  <realization id="50">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="51">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <association id="52">    
     <bendpoint x="1853" y="1113"/>    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="94" name="display"/>      
-      <multiplicity id="95" minimum="0" maximum="1"/>    
+      <attribute id="53" name="display"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
+    <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="96">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="97">    
+  <association id="55">    
+    <bendpoint x="765" y="1091"/>    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="98" name="sensor"/>      
-      <multiplicity id="99" minimum="0" maximum="1"/>    
+      <attribute id="56" name="displays"/>      
+      <multiplicity id="57" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="100">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <association id="101">    
+  <association id="58">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="59" name="observers"/>      
+      <multiplicity id="60" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
     <bendpoint x="1416" y="289"/>    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="102" name="sensor"/>      
-      <multiplicity id="103" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="62" name="sensor"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="104">    
-    <end type="SOURCE" refId="8"/>    
+  <realization id="64">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="65">    
+    <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <association id="105">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="106" name="removeDisplayCmd"/>      
-      <multiplicity id="107" minimum="0" maximum="1"/>    
+  <association id="66">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="67" name="removeDisplayCmd"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="108">    
-    <bendpoint x="855" y="136"/>    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="109" name="sensor"/>      
-      <multiplicity id="110" minimum="0" maximum="1"/>    
+  <realization id="69">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
+  <association id="70">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="71" name="observers"/>      
+      <multiplicity id="72" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="111">    
+  <association id="73">    
+    <bendpoint x="1368" y="-316"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="74" name="proxyAO"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="76">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="77">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="78" name="subject"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="81" name="sensor"/>      
+      <multiplicity id="82" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <association id="84">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="85" name="sensor"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
     <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="112" name="proxyAO"/>      
-      <multiplicity id="113" minimum="0" maximum="1"/>    
+      <attribute id="88" name="displayGUI"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="24" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="114">    
-    <bendpoint x="883" y="-135"/>    
-    <bendpoint x="884" y="-226"/>    
-    <end type="SOURCE" refId="15"/>    
+  <association id="90">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="91" name="channels"/>      
+      <multiplicity id="92" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="93">    
+    <bendpoint x="471" y="-294"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="94" name="diffusion"/>      
+      <multiplicity id="95" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="96">    
+    <bendpoint x="1489" y="1149"/>    
+    <bendpoint x="510" y="1141"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <realization id="97">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <association id="98">    
+    <bendpoint x="1594" y="248"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="99" name="update"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="101">    
+    <bendpoint x="1330" y="86"/>    
+    <bendpoint x="1327" y="240"/>    
+    <bendpoint x="526" y="244"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="102" name="observers"/>      
+      <multiplicity id="103" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="104">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="105" name="ihm"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="107">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="108" name="proxyAO"/>      
+      <multiplicity id="109" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="110">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="111" name="sensor"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="113">    
+    <bendpoint x="855" y="136"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="114" name="sensor"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="116">    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <association id="115">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="116" name="subject"/>      
-      <multiplicity id="117" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <realization id="117">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true"/>    
