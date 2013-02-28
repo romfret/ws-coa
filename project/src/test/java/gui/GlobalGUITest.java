@@ -1,18 +1,18 @@
-package diffusion.display.gui;
+package gui;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import gui.command.CommandAddDisplay;
+import gui.command.CommandDiffusion;
+import gui.command.CommandRemoveDisplay;
+import gui.command.ICommand;
+import gui.command.ICommandDiffusion;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import diffusion.display.gui.command.CommandAddDisplay;
-import diffusion.display.gui.command.CommandDiffusion;
-import diffusion.display.gui.command.CommandRemoveDisplay;
-import diffusion.display.gui.command.ICommand;
-import diffusion.display.gui.command.ICommandDiffusion;
 import diffusion.sensor.Sensor;
 
 public class GlobalGUITest {

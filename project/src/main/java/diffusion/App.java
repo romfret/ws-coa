@@ -1,5 +1,10 @@
 package diffusion;
 
+import gui.GlobalGUI;
+import gui.command.CommandAddDisplay;
+import gui.command.CommandDiffusion;
+import gui.command.CommandRemoveDisplay;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,10 +13,6 @@ import diffusion.channel.proxy.Channel;
 import diffusion.channel.proxy.IChannel;
 import diffusion.display.Display;
 import diffusion.display.IDisplay;
-import diffusion.display.gui.GlobalGUI;
-import diffusion.display.gui.command.CommandAddDisplay;
-import diffusion.display.gui.command.CommandDiffusion;
-import diffusion.display.gui.command.CommandRemoveDisplay;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 

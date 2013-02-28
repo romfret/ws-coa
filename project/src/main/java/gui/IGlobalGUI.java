@@ -1,9 +1,9 @@
-package diffusion.display.gui;
+package gui;
+
+import gui.command.ICommand;
+import gui.command.ICommandDiffusion;
 
 import java.util.List;
-
-import diffusion.display.gui.command.ICommand;
-import diffusion.display.gui.command.ICommandDiffusion;
 
 
 public interface IGlobalGUI {

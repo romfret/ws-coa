@@ -1,3 +1,6 @@
+import gui.DisplayGUITest;
+import gui.GlobalGUITest;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
@@ -5,8 +8,6 @@ import org.junit.runners.Suite.SuiteClasses;
 import diffusion.activeObject.ProxyAOTest;
 import diffusion.activeObject.UpdateTest;
 import diffusion.display.DisplayTest;
-import diffusion.display.gui.DisplayGUITest;
-import diffusion.display.gui.GlobalGUITest;
 import diffusion.sensor.SensorTest;
 import diffusion.sensor.strategy.AtomicDiffusionIntegrationTest;
 import diffusion.sensor.strategy.SequentialDiffusionIntegrationTest;

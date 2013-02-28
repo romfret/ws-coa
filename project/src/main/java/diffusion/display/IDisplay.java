@@ -1,9 +1,10 @@
 package diffusion.display;
 
+import gui.DisplayGUI;
+
 import java.util.concurrent.Future;
 
 import diffusion.activeObject.IUpdate;
-import diffusion.display.gui.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 

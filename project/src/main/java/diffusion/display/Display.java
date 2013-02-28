@@ -1,12 +1,13 @@
 package diffusion.display;
 
+import gui.DisplayGUI;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import diffusion.activeObject.IUpdate;
-import diffusion.display.gui.DisplayGUI;
 import diffusion.sensor.ISensor;
 
 /**

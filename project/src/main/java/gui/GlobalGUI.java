@@ -1,4 +1,6 @@
-package diffusion.display.gui;
+package gui;
+import gui.command.ICommand;
+import gui.command.ICommandDiffusion;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -17,8 +19,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 import diffusion.App;
-import diffusion.display.gui.command.ICommand;
-import diffusion.display.gui.command.ICommandDiffusion;
 
 public class GlobalGUI extends JFrame implements IGlobalGUI {
 	private static final long serialVersionUID = 1L;

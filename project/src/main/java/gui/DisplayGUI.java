@@ -1,4 +1,4 @@
-package diffusion.display.gui;
+package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

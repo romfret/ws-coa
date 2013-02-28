@@ -1,4 +1,4 @@
-package diffusion.display.gui.command;
+package gui.command;
 
 public interface ICommand {
 	

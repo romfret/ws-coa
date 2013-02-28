@@ -1,5 +1,7 @@
 package diffusion.channel.proxy;
 
+import gui.DisplayGUI;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
@@ -8,7 +10,6 @@ import java.util.concurrent.TimeUnit;
 import diffusion.activeObject.IUpdate;
 import diffusion.activeObject.Update;
 import diffusion.display.IDisplay;
-import diffusion.display.gui.DisplayGUI;
 import diffusion.observer.IObserver;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.strategy.IDiffusion;

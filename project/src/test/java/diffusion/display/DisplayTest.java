@@ -3,15 +3,13 @@ package diffusion.display;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import gui.DisplayGUI;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import diffusion.App;
-import diffusion.display.Display;
-import diffusion.display.IDisplay;
-import diffusion.display.gui.DisplayGUI;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
