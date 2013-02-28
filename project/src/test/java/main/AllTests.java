@@ -1,3 +1,4 @@
+package main;
 import gui.DisplayGUITest;
 import gui.GlobalGUITest;
 
