@@ -16,29 +16,27 @@ public class UpdateTest {
 	public void tearDown() throws Exception {
 	}
 
+	/**
+	 * test the getter/setter of the observer
+	 */
 	@Test
-	public void testCall() {
+	public void testGetSetObserver() {
 		fail("Not yet implemented");
 	}
 
+	/**
+	 * test the getter/setter of the subject
+	 */
 	@Test
-	public void testSetObserver() {
+	public void testGetSetSubject() {
 		fail("Not yet implemented");
 	}
 
+	/**
+	 * test the getter/setter of the name
+	 */
 	@Test
-	public void testSetSubject() {
+	public void testGetSetName() {
 		fail("Not yet implemented");
 	}
-
-	@Test
-	public void testSetName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetName() {
-		fail("Not yet implemented");
-	}
-
 }

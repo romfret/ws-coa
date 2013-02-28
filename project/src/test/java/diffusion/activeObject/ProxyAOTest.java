@@ -16,16 +16,17 @@ public class ProxyAOTest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testProxyAO() {
-		fail("Not yet implemented");
-	}
-
+	/**
+	 * test if the Update Object is created
+	 */
 	@Test
 	public void testCreateUpdateObject() {
 		fail("Not yet implemented");
 	}
 
+	/**
+	 * test if TODO
+	 */
 	@Test
 	public void testInvokeAll() {
 		fail("Not yet implemented");

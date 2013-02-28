@@ -32,23 +32,30 @@ public class App {
 	private static Map<String, IChannel> channels;
 	
 	public static void main(String[] args) {
+		// Instanciation of an Ihm, a sensors, displays and channels
 		ihm = new Ihm();
 		sensor = new Sensor();
 		displays = new HashMap<String, IDisplay>();
 		channels = new HashMap<String, IChannel>();
 		
+		// Instanciation of a new clock which will tick every second
 		Clock h = new Clock();
 		h.periodicallyActivate(sensor, 1000);
 		
+		// Set the command for the Ihm interaction
 		ihm.setCommandDiffusion(new CommandDiffusion(sensor));
 		ihm.setCommandAddDisplay(new CommandAddDisplay());
 		ihm.setCommandRemoveDisplay(new CommandRemoveDisplay());
 		
+		// Add 3 displays by default
 		addDisplay();
 		addDisplay();
 		addDisplay();
 	}
 	
+	/**
+	 * Add a new display in the app and presentation
+	 */
 	public static void addDisplay() {
 		int number = displays.size() + 1;
 		
@@ -62,6 +69,9 @@ public class App {
 		channels.put(channel.getName(), channel);
 	}
 	
+	/**
+	 * remove a display from the app and presentation
+	 */
 	public static void removeDisplay() {
 		int number = displays.size();
 		
