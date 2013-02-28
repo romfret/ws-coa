@@ -1,4 +1,4 @@
-package unit;
+package diffusion.sensor;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -14,7 +14,7 @@ import diffusion.sensor.strategy.AtomicDiffusion;
 import diffusion.sensor.strategy.PeriodDiffusion;
 import diffusion.sensor.strategy.SequentialDiffusion;
 
-public class SensorTests {
+public class SensorTest {
 
 	private ISensor sensor;
 	

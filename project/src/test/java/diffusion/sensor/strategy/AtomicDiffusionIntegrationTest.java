@@ -1,4 +1,4 @@
-package integration;
+package diffusion.sensor.strategy;
 
 import static org.junit.Assert.*;
 
@@ -15,7 +15,7 @@ import diffusion.display.IDisplay;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
-public class AtomicDiffusionTests {
+public class AtomicDiffusionIntegrationTest {
 
 	private ISensor sensor;
 	private IChannel channel1;

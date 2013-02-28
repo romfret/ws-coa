@@ -1,4 +1,4 @@
-package unit;
+package diffusion.display;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -15,7 +15,7 @@ import diffusion.display.ihm.DisplayGUI;
 import diffusion.sensor.ISensor;
 import diffusion.sensor.Sensor;
 
-public class DisplayTests {
+public class DisplayTest {
 
 	private IDisplay display;
 	private ISensor sensor;
@@ -31,18 +31,24 @@ public class DisplayTests {
 	}
 	
 	/**
-	 * Sensor change value test
+	 * test the returned name of the Display
 	 */
 	@Test
 	public void testGetName() {
 		assertEquals("testGetName","A", display.getName());
 	}
 	
+	/**
+	 * test the returned presensation
+	 */
 	@Test
 	public void testGetPresentation(){
 		assertTrue("testGetPresentation", display.getPresentation() instanceof DisplayGUI);
 	}
 	
+	/**
+	 * test if the presentation have the values of the sensor
+	 */
 	@Test
 	public void testUpdate(){
 		sensor.tick();
@@ -55,6 +61,9 @@ public class DisplayTests {
 		assertEquals("testUpdate - Version", ver1, display.getPresentation().getVersion());
 	}
 	
+	/**
+	 * test if the value is correct with the atomic diffusion
+	 */
 	@Test
 	public void testGetValueWithAtomicDiffusion() {
 		sensor.setDiffusion(App.ATOMIC_DIFFUSION);
@@ -66,6 +75,9 @@ public class DisplayTests {
 		assertEquals("testGetValueWithAtomicDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the value is correct with the periodic diffusion
+	 */
 	@Test
 	public void testGetValueWithPeriodicDiffusion() {
 		sensor.setDiffusion(App.PERIOD_DIFFUSION);
@@ -77,6 +89,9 @@ public class DisplayTests {
 		assertEquals("testGetValueWithPeriodicDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the value is correct with the sequential diffusion
+	 */
 	@Test
 	public void testGetValueWithSequentialDiffusion() {
 		sensor.setDiffusion(App.SEQUENTIAL_DIFFUSION);
@@ -88,6 +103,9 @@ public class DisplayTests {
 		assertEquals("testGetValueWithSequentialDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the version is correct with the atomic diffusion
+	 */
 	@Test
 	public void testGetVersionWithAtomicDiffusion() {
 		sensor.setDiffusion(App.ATOMIC_DIFFUSION);
@@ -101,6 +119,9 @@ public class DisplayTests {
 		assertEquals("testGetVersionWithSequentialDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the version is correct with the periodic diffusion
+	 */
 	@Test
 	public void testGetVersionWithPeriodicDiffusion() {
 		sensor.setDiffusion(App.PERIOD_DIFFUSION);
@@ -114,6 +135,9 @@ public class DisplayTests {
 		assertEquals("testGetVersionWithSequentialDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the version is correct with the senquential diffusion
+	 */
 	@Test
 	public void testGetVersionWithSequentialDiffusion() {
 		sensor.setDiffusion(App.SEQUENTIAL_DIFFUSION);
@@ -127,6 +151,9 @@ public class DisplayTests {
 		assertEquals("testGetVersionWithSequentialDiffusion", val1, val2);
 	}
 	
+	/**
+	 * test if the createUpdate return a null object
+	 */
 	@Test
 	public void testCreateUpdate(){
 		assertNull(display.createUpdate(sensor));
