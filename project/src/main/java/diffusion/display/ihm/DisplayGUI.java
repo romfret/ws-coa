@@ -17,6 +17,8 @@ public class DisplayGUI extends JPanel {
 	private JLabel lblValue;
 	private JLabel lblName;
 	private JLabel lblVersion;
+	private int value;
+	private long version;
 
 	public DisplayGUI(String name) {
 		setVisible(true);
@@ -49,11 +51,21 @@ public class DisplayGUI extends JPanel {
 	}
 	
 	public void setValue(int number) {
+		value = number;
 		lblValue.setText(String.valueOf(number + "  "));
 	}
 	
 	public void setVersion(long number) {
+		version = number;
 		lblVersion.setText("  Version : " + String.valueOf(number));
+	}
+	
+	public int getValue(){
+		return value;
+	}
+	
+	public long getVersion(){
+		return version;
 	}
 
 }

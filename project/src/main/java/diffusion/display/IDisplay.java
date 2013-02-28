@@ -13,17 +13,39 @@ import diffusion.sensor.ISensor;
  *
  */
 public interface IDisplay extends IObserver<ISensor> {
-	
-	public Future<?> update(ISensor sensor);
-	
+	/**
+	 * return the name of the display
+	 * @return
+	 */
 	public String getName();
 
-	public DisplayGUI getPresentation();
-
-	public IUpdate createUpdate(ISensor sensor);
-	
+	/**
+	 * return the current value of the display
+	 * @return
+	 */
 	public int getValue();
 	
+	/**
+	 * return the current version of the display
+	 * @return
+	 */
 	public long getVersion();
+	
+	/**
+	 * return the presentation
+	 * @return
+	 */
+	public DisplayGUI getPresentation();
 
+	/**
+	 * return a null update object
+	 * @param sensor
+	 * @return
+	 */
+	public IUpdate createUpdate(ISensor sensor);
+	
+	/**
+	 * update value and version in the presentation
+	 */
+	public Future<?> update(ISensor sensor);
 }

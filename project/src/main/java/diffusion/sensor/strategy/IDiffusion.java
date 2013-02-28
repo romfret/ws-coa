@@ -12,7 +12,16 @@ import diffusion.sensor.ISensor;
  *
  */
 public interface IDiffusion {
+	/**
+	 * configure the strategy with a sensor and a list of observers
+	 * @param sensor
+	 * @param observers
+	 */
 	public void configure(ISensor sensor, @SuppressWarnings("rawtypes") List<IObserver> observers);
+	
+	/**
+	 * diffuse a value with a specific strategy
+	 */
 	public void execute();
 	
 	/**
