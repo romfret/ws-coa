@@ -124,7 +124,7 @@ public class GlobalGUI extends JFrame implements IGlobalGUI {
 	}
 
 	/* (non-Javadoc)
-	 * @see diffusion.display.ihm.IIhm#addDisplay(diffusion.display.ihm.DisplayGUI)
+	 * @see diffusion.display.gui.IGlobalGUI#addDisplay(diffusion.display.ihm.DisplayGUI)
 	 */
 	public void addDisplay(DisplayGUI display) {
 		displays.add(display);
@@ -132,7 +132,7 @@ public class GlobalGUI extends JFrame implements IGlobalGUI {
 	}
 	
 	/* (non-Javadoc)
-	 * @see diffusion.display.ihm.IIhm#removeDisplay(diffusion.display.ihm.DisplayGUI)
+	 * @see diffusion.display.gui.IGlobalGUI#removeDisplay(diffusion.display.ihm.DisplayGUI)
 	 */
 	public void removeDisplay(DisplayGUI display) {
 		displays.remove(display);
@@ -141,21 +141,21 @@ public class GlobalGUI extends JFrame implements IGlobalGUI {
 	}
 
 	/* (non-Javadoc)
-	 * @see diffusion.display.ihm.IIhm#setCommandDiffusion(diffusion.display.ihm.command.ICommandDiffusion)
+	 * @see diffusion.display.gui.IGlobalGUI#setCommandDiffusion(diffusion.display.ihm.command.ICommandDiffusion)
 	 */
 	public void setCommandDiffusion(ICommandDiffusion diffusionCmd) {
 		this.diffusionCmd = diffusionCmd;
 	}
 
 	/* (non-Javadoc)
-	 * @see diffusion.display.ihm.IIhm#setCommandAddDisplay(diffusion.display.ihm.command.ICommand)
+	 * @see diffusion.display.gui.IGlobalGUI#setCommandAddDisplay(diffusion.display.ihm.command.ICommand)
 	 */
 	public void setCommandAddDisplay(ICommand addDisplayCmd) {
 		this.addDisplayCmd = addDisplayCmd;
 	}
 
 	/* (non-Javadoc)
-	 * @see diffusion.display.ihm.IIhm#setCommandRemoveDisplay(diffusion.display.ihm.command.ICommand)
+	 * @see diffusion.display.gui.IGlobalGUI#setCommandRemoveDisplay(diffusion.display.ihm.command.ICommand)
 	 */
 	public void setCommandRemoveDisplay(ICommand removeDisplayCmd) {
 		this.removeDisplayCmd = removeDisplayCmd;
